@@ -7,17 +7,17 @@ selectElem.addEventListener('change', changeTheme);
 function changeTheme() {
     let current = selectElem.value;
     if (current === 'ocean') {
-        document.body.style.backgroundImage = "url('ocean.jpg')";
-        logo.setAttribute('src', 'ocean-logo.png');
+        document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/ocean.jpg')";
+        
     } else if (current === 'forest') {
-        document.body.style.backgroundImage = "url('forest.jpg')";
-        logo.setAttribute('src', 'forest-logo.png');
+        document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/forest.jpg')";
+        pageContent.style.fontFamily = "Arial, sans-serif";;
     } else if (current === 'desert') {
-        document.body.style.backgroundImage = "url('desert.jpg')";
-        logo.setAttribute('src', 'desert-logo.png');
+        document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/desert.jpg')";
+        pageContent.style.fontFamily = "'Courier New', monospace";
     } else {
         // default
         document.body.style.backgroundImage = "none";
-        logo.setAttribute('src', 'default-logo.png');
+        pageContent.style.fontFamily = "Georgia, serif";
     }
 }
