@@ -1,0 +1,89 @@
+h1 {
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.tab-container, .text-container {
+width: 100%;
+max-width: 800px;
+margin: 2rem auto;
+border-radius: 8px 8px 0 0;
+box-shadow: 5px 5px 10px #757474;
+font-family: 'Segoe UI', sans-serif;
+}
+
+.tabs {
+display: flex;
+border-bottom: 2px solid #ddd;
+}
+
+.tab-label {
+flex: 1;
+text-align: center;
+padding: 1rem;
+background: #f0f0f0;
+cursor: pointer;
+font-weight: 600;
+border: 1px solid #ccc;
+border-bottom: none;
+border-radius: 8px 8px 0 0;
+transition: background 0.3s, color 0.3s;
+margin-bottom: -1px; /* visually overlaps the content */
+}
+
+/* Hide radio buttons */
+.tab-container input[type="radio"] {
+display: none;
+}
+
+/* Active tab styling */
+#tab1:checked ~ .tabs label[for="tab1"],
+#tab2:checked ~ .tabs label[for="tab2"] {
+background: #565555;
+color: white;
+border-color: #565555;
+z-index: 1;
+}
+
+/* Content area */
+.tab-content {
+display: none;
+padding: 1.5rem;
+border: 1px solid #ccc;
+border-radius: 0 0 8px 8px;
+background: white;
+line-height: 1.6;
+}
+
+/* Show the correct content */
+#tab1:checked ~ #js_content,
+#tab2:checked ~ #html_content {
+display: block;
+}
+
+iframe {
+width: 100%; 
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#back {
+color: black;
+text-align: center;
+}
+
+.flex {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+justify-content: space-evenly;
+gap: 20px;
+}
+
+button {
+margin: 20px 1px 0 1px;
+font-size: .87em;
+}
