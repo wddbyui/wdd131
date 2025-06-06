@@ -1,0 +1,28 @@
+body {
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 20px;
+    transition: background-image 0.4s ease;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+select {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+img {
+    margin-top: 1rem;
+}
+
+.content {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
