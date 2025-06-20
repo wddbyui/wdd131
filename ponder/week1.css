@@ -18,10 +18,30 @@ header, footer {
 }
 p, li {
   font-size: 1.2em;
-  line-height: 1.2em;
+  line-height: 1.3em;
 }
 main {
     flex: 1;
+}
+video {
+  width: 100%;
+  border: 2px solid black;
+}
+pre {
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: #dddcdc;
+  padding: 10px 20px 0 20px;
+}
+.code-block {
+  white-space: pre-wrap;     /* Wrap lines instead of scrolling horizontally */
+  font-family: monospace;
+  word-break: break-word;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+em {
+  font-weight: 900;
 }
 /* Banner */
 .banner {
@@ -33,7 +53,7 @@ main {
   padding: 1.5rem 2rem;
   border-top: 8px solid #1d366a;
   border-bottom: 8px solid #1d366a;
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   letter-spacing: -4px;
 }
@@ -72,6 +92,7 @@ footer {
     color: white;
     border-top: 8px solid #1d366a;
     border-bottom: 8px solid #1d366a;
+    box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.3);
 }
 footer p {
     padding: 10px;

@@ -34,17 +34,17 @@
     <main>
       <div id="content">
         <h1>Ponder - Computational Thinking</h1>
-        <p>Computational Thinking is the way programmers think when they are solving problems with code. It helps the programmer plan what the program should do before they start writing the code. It's preparing step-by-step instructions that a computer can follow.</p>
+        <p>'Computational Thinking' is the way programmers think when they are solving problems with code. It helps the programmer plan what the program should do before they start writing the code. It's preparing step-by-step instructions that a computer can follow.</p>
         <h2>3 Steps of Computational Thinking:</h2>
         <ol>
           <li>Break the problem into smaller parts</li>
           <li>Look for repeated or similar steps</li>
           <li>Make a list of steps</li>
         </ol>
-        <p>You want to write an application that lets the user choose their own theme or interface environment. They will choose from 3 different themes that have a different background and font style for the app.</p>
-        <p>This video demonstrated the idea that you have in your head:</p>
-        <video width="320" height="240" controls>
-          <source src="videos/themes-video.mp4" type="video/mp4">
+        <p>For example, say you want to write an application that lets the user choose their own theme or interface environment. They will choose from 3 different themes that have a different background and font style for the app.</p>
+        <p>This video demonstrates the idea that you have in your head:</p>
+        <video controls>
+          <source src="../videos/themes-video.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <h2>Let's go through the Computationals Thinking steps</h2>
@@ -67,10 +67,114 @@
               <li>According to what theme they choose, change the background image and font style of my page to match that theme.</li>
             </ul>
         </ol>
-        <p>This list of steps is also called pseudocode. Pseudocode uses plain language (or the language you speak and write in) along with programming logic. It won't run on a computer, so you don't have to have syntax perfect, but it helps you focus on logic and step without worrying about code.</p>
-        <p>As you get to know your coding language better your pseudocode might get a little closer to the programming language. For example:</p>
+        <p>This last #3 list of steps is also called pseudocode. Pseudocode uses plain language (or the language you speak and write in) along with programming logic. It won't run on a computer, so you don't have to have syntax perfect, but it helps you focus on logic and steps without worrying about code.</p>
+        <h3>The same pseudocode, closer to the coding language</h3>
+        <p>As you get to know your coding language better, your pseudocode might get a little closer to the programming language. For example:</p>
+        <ul>
+          <li>Target all the elements I will need for this to run:  the body element to change its background and font, and the drop down menu or select element.</li>
+          <li>Add an event listener to call a function to run code only when the user changes the theme.</li>
+          <li>In the function that runs when the theme changes:</li>
+          <ul>
+            <li>Get the value from the drop-down so you know what theme they chose</li>
+            <li>If the value is ocean then change the body font style to Papyrus and the background image to ocean.jpg.</li>
+            <li>If the value is forest then change the body font style to Impact and the background image to forest.jpg.</li>
+            <li>If the value is desert then change the body font style to Big Caslon and the background image to dessert.jpg.</li>
+            <li>Otherwise no changes will be made to the background and the font will remain the same.</li>
+          </ul>
+        </ul>
+        <p>Once you have your HTML and image files ready to go and you've planned out your pseudocode, then finally you are ready to code your JavaScript. You can simply follow the pseudocode that you already wrote and just make sure the syntax is coded properly. <em>You do not need to understand all this code at this point in the course, but some of it may look familiar to what was covered this week.</em></p>
+        <p>JavaScript:</p>
+        <pre>
+          <code class="code-block">
+let selectElem = document.querySelector('#theme-select');
+let pageContent = document.querySelector('body');
 
-<Target all the elements I will need for this to run:  the body element to change its background and font, and the drop down menu or select element that I gave the id of ‘theme-select’ to.
+selectElem.addEventListener('change', changeTheme);
+
+function changeTheme() {
+    let current = selectElem.value;
+    if (current === 'ocean') {
+        document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/ocean.jpg')";
+        pageContent.style.fontFamily = "Papyrus, fantasy";
+    } else if (current === 'forest') {
+        document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/forest.jpg')";
+        pageContent.style.fontFamily = "Impact, sans-serif";
+    } else if (current === 'desert') {
+        document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/desert.jpg')";
+        pageContent.style.fontFamily = "'Big Caslon', serif";
+    } else {
+        // default
+        document.body.style.backgroundImage = "none";
+        pageContent.style.fontFamily = "Georgia, serif";
+    }
+}
+          </code>
+        </pre>
+        <p>HTML:</p>
+        <pre>
+          <code class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;WDD 131 Dynamic Web Fundamentals&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;week1.css&quot;&gt;
+    &lt;script src=&quot;week1.js&quot; defer&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1&gt;Pick a Theme&lt;/h1&gt;
+        &lt;select id=&quot;theme-select&quot;&gt;
+            &lt;option value=&quot;&quot;&gt;-- Select a Theme --&lt;/option&gt;
+            &lt;option value=&quot;ocean&quot;&gt;Ocean&lt;/option&gt;
+            &lt;option value=&quot;forest&quot;&gt;Forest&lt;/option&gt;
+            &lt;option value=&quot;desert&quot;&gt;Desert&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;p&gt;Try switching themes to change the page&#39;s look!&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;img id=&quot;logo&quot; src=&quot; https://wddbyui.github.io/wdd131/images/wdd131.png&quot; alt=&quot;WDD131 Dynamic Web Logo&quot;&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+          </code>
+        </pre>
+        <p>CSS:</p>
+        <pre>
+          <code>
+body {
+    background-size: 100vw 100vh;
+    margin: 0;
+    padding: 20px;
+    transition: background-image 1s ease;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+select {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+#logo {
+    margin-top: 1rem;
+    width: 300px;
+}
+
+.content {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+          </code>
+        </pre>
+
+
 
       </div>
     </main>
