@@ -173,14 +173,15 @@ select {
 }
           </code>
         </pre>
-
-
-
       </div>
     </main>
     <footer>
       <p>Brigham Young University - Idaho <span id="year"></span></p>
     </footer>
     </div>
+    <script>
+      let year = new Date();
+      document.querySelector('#year').textContent = year.getFullYear();
+    </script>
 </body>
 </html>
