@@ -2,7 +2,7 @@ html, body {
     height: 100%;
     margin: 0;
 }
-body {
+header, footer {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .wrapper {
@@ -12,8 +12,13 @@ body {
     align-content: space-between;
 }
 #content {
-    text-align: center;
-    margin: 62px 0;
+    font-family: Calibri, 'Trebuchet MS', sans-serif, 'Times New Roman', Times, serif;
+    max-width: 60%;
+    margin: 62px auto;
+}
+p, li {
+  font-size: 1.2em;
+  line-height: 1.2em;
 }
 main {
     flex: 1;
@@ -82,6 +87,9 @@ footer p {
 
 /* All pages */
 @media screen and (max-width: 550px) {
+    #content {
+      max-width: 75%;
+    }
     .web, .title, .banner-right {
         font-size: 1.5rem;
     }
