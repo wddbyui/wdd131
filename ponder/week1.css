@@ -1,29 +1,91 @@
-body {
-    background-size: 100vw 100vh;
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 20px;
-    transition: background-image 1s ease;
 }
-
-.container {
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+#content {
     text-align: center;
-    padding: 2rem;
-    max-width: 600px;
-    margin: 2rem auto;
+    margin: 62px 0;
+}
+main {
+    flex: 1;
+}
+/* Banner */
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #000814, #003566, #00509d);
+  color: white;
+  padding: 1.5rem 2rem;
+  border-top: 8px solid #1d366a;
+  border-bottom: 8px solid #1d366a;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: -4px;
 }
 
-select {
-    padding: 0.5rem;
-    font-size: 1rem;
+.banner-left {
+  display: flex;
+  align-items: center;
 }
 
-#logo {
-    margin-top: 1rem;
-    width: 300px;
+.web {
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: -3px;
+  transform: rotate(-90deg);
 }
 
-.content {
-    margin-top: 3rem;
-    font-size: 1.5rem;
+.title {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
 }
 
+.banner-right {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #000814, #003566, #00509d);
+    color: white;
+    border-top: 8px solid #1d366a;
+    border-bottom: 8px solid #1d366a;
+}
+footer p {
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+/* ---- per page ---- */
+
+
+
+
+
+/* All pages */
+@media screen and (max-width: 550px) {
+    .web, .title, .banner-right {
+        font-size: 1.5rem;
+    }
+    .banner {
+         padding: .8rem 1.2rem;
+    }
+}

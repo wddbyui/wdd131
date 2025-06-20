@@ -77,3 +77,6 @@ btn.forEach(button =>{
         };        
     })
 })
+
+let year = new Date();
+document.querySelector('#year').textContent = year.getFullYear();
