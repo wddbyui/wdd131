@@ -60,6 +60,12 @@
                 <li>
                   <h3>Getting a random number with Math.random()</h3>
                   <p>Math.random() generates a random decimal number between 0 and 1. When combined with .floor and multiplication you can get random whole numbers.</p>
+                  <pre>
+                    <code class="code-block">
+// Returns a random integer from 0 to 9:
+Math.floor(Math.random() * 10);
+                    </code>
+                  </pre>
                 </li>
                 <li>
                   <h3>Looping using a set number with a for loop</h3>
@@ -181,7 +187,7 @@ const animals = [
               </code>
           </pre>
         <h2>Putting it all together</h2>
-        <p>We want to use the hikes object array to allow user to search for terms related to hikes and each object's properties and arrays will be filtered according to the string they searched for. We will be looking for the search string in the hike name, the hike description, and the tags array for each hike. We will also display the difficulty property of each hike by displaying a number of boots for each level of difficulty.
+        <p>We want to use the hikes object array to allow the user to search for terms related to hikes and each object's properties and arrays will be filtered according to the string they searched for. We will be looking for the search string in the hike name, the hike description, and the tags array for each hike. We will also display the difficulty property of each hike by displaying a number of boots for each level of difficulty.
         </p>
         <p>After the results are filtered they will be sorted by the distance of each hike.</p>
         <p>A random hike will show up initially before the user searches.</p>
