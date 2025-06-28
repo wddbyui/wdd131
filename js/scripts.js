@@ -80,3 +80,70 @@ btn.forEach(button =>{
 
 let year = new Date();
 document.querySelector('#year').textContent = year.getFullYear();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.getElementById("introduced-topics-toggle");
+  const content = document.getElementById("introduced-topics-content");
+
+  toggleButton.addEventListener("click", () => {
+    const expanded = toggleButton.getAttribute("aria-expanded") === "true";
+    toggleButton.setAttribute("aria-expanded", String(!expanded));
+    content.hidden = expanded;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleRButton = document.getElementById("review-topics-toggle");
+  const content = document.getElementById("review-topics-content");
+
+  toggleRButton.addEventListener("click", () => {
+    const expanded = toggleRButton.getAttribute("aria-expanded") === "true";
+    toggleRButton.setAttribute("aria-expanded", String(!expanded));
+    content.hidden = expanded;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleStButton = document.getElementById("started-topics-toggle");
+  const content = document.getElementById("started-topics-content");
+
+  toggleStButton.addEventListener("click", () => {
+    const expanded = toggleStButton.getAttribute("aria-expanded") === "true";
+    toggleStButton.setAttribute("aria-expanded", String(!expanded));
+    content.hidden = expanded;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleSButton = document.getElementById("solution-topics-toggle");
+  const content = document.getElementById("solution-topics-content");
+
+  toggleSButton.addEventListener("click", () => {
+    const expanded = toggleSButton.getAttribute("aria-expanded") === "true";
+    toggleSButton.setAttribute("aria-expanded", String(!expanded));
+    content.hidden = expanded;
+  });
+});
+
+
+// Accordian
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const toggleButton = document.getElementById("introduced-topics-toggle");
+//     const content = document.getElementById("introduced-topics-content");
+
+//     toggleButton.addEventListener("click", function () {
+//       const expanded = toggleButton.getAttribute("aria-expanded") === "true";
+
+//       // Toggle the aria-expanded attribute
+//       toggleButton.setAttribute("aria-expanded", !expanded);
+
+//       // Toggle the visibility of the content
+//       if (expanded) {
+//         content.setAttribute("hidden", "");
+//       } else {
+//         content.removeAttribute("hidden");
+//       }
+//     });
+//   });
+

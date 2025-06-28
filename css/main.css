@@ -13,7 +13,7 @@ header, footer {
 }
 #content {
     font-family: Calibri, 'Trebuchet MS', sans-serif, 'Times New Roman', Times, serif;
-    max-width: 60%;
+    max-width: 80%;
     margin: 62px auto;
 }
 p, li {
@@ -43,6 +43,14 @@ pre {
 em {
   font-weight: 900;
 }
+.moz {
+  text-decoration: underline;
+  color: #003566;
+}
+.moz:hover {
+  color:#00509d
+}
+
 /* Banner */
 .banner {
   display: flex;
@@ -84,6 +92,43 @@ em {
 a{
     text-decoration: none;
     color: #000;
+}
+/* Accordian */
+.accordion button {
+  font-size: 1.25rem;
+  background: none;
+  border: none;
+  color: #0077cc;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+}
+
+.accordion button:focus {
+  outline: 2px solid #005fa3;
+  outline-offset: 2px;
+}
+
+.accordion [hidden] {
+  display: none;
+}
+
+button .caret {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin-right: 0.5em;
+}
+
+/* Rotate caret when expanded */
+button[aria-expanded="true"] .caret {
+  transform: rotate(90deg);
+}
+ div .intro, div .review, div .solution, div .started {
+  background-color: #dddcdc;
+  font-size: .8em;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
 
 /* Footer */

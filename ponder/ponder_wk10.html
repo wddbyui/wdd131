@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponder - Week 10</title>
+    <meta name="description" content="Curriculum for the BYUI WDD 131 course">
+    <meta name="author" content="Julie Ann Anderson">
+    <meta property="og:site_name" content="WDD 131 Dynamic Web Fundamentals">
+    <meta property="og:title" content="JS">
+    <meta property="og:description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:url" content="https://wddbyui.github.io/wdd131/">
+    <meta property="og:locale" content="en_us">
+    <meta name="twitter:card" content="summary">
+    <link rel="apple-touch-icon" sizes="157x157" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" href="../images/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="banner">
+      <div class="banner-left">
+        <span class="web">WEB</span>
+        <div class="title">
+          <div>DYNAMIC</div>
+          <div>FUNDAMENTALS</div>
+        </div>
+      </div>
+      <div class="banner-right">
+        WDD 131
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <h1>Ponder - Filtering and Sorting</h1>
+        <section class="accordion">
+          <h2>
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="introduced-topics-content"
+              id="introduced-topics-toggle"
+            >
+              <span class="caret" aria-hidden="true">▶</span>
+              Introduced Topics
+            </button>
+          </h2>
+          <div
+            id="introduced-topics-content"
+            role="region"
+            aria-labelledby="introduced-topics-toggle"
+            hidden
+          >
+              <ul class="intro">
+                <li>
+                  <h3>Sorting with .sort()</h3>
+                  <p>The .sort() method reorders the items in an array based on rules you define.</p>
+                </li>
+                <li>
+                  <h3>Getting a random number with Math.random()</h3>
+                  <p>Math.random() generates a random decimal number between 0 and 1. When combined with .floor and multiplication you can get random whole numbers.</p>
+                </li>
+                <li>
+                  <h3>Looping using a set number with a for loop</h3>
+                  <p>A for loop is a way to repeat a block of code a set number of times.</p>
+                  <pre>
+                    <code class="code-block">
+for (let i = 0; i &lt; 5; i++) {
+    console.log(hikes[i].name);
+}
+                    </code>
+                  </pre>
+                  <p>let i = 0; starts at 0 (initialize the counter).</p>
+                  <p>i < 5; is the condition that as long as it is true the loop will keep going.</p>
+                  <p>i++ increases i by 1 each time through the loop.</p>
+                </li>
+                <li>
+                  <h3>.includes()</h3>
+                  <p>Will find out if a certain value exists in a string.</p>
+                </li>
+                <li>
+                  <h3>.find()</h3>
+                  <p>Searches an array and returns those that include a certain string.</p>
+                </li>
+              </ul>
+            </div>
+        </section>    
+        
+        <section class="accordion">
+          <h2>
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-controls="review-topics-content"
+                id="review-topics-toggle"
+              >
+                <span class="caret" aria-hidden="true">▶</span>
+                Review Topics
+              </button>
+            </h2>
+            <div
+              id="review-topics-content"
+              role="region"
+              aria-labelledby="review-topics-toggle"
+              hidden
+            >
+                <ul class="review">
+                  <li>
+                    <h4>Filtering with .filter()</h4>
+                    <p>The .filter() method works with an array. It will create a new array that only includes the array items that match a certain condition.</p>
+                  </li>
+                  <li>
+                    <h4>.map</h4>
+                    <p>The .map() method works with an array, transforming each element in the array. It will create a new array based on the results.</p>
+                  </li>
+                </ul>
+          </div>
+        </section>
+        <h2>Practice Code - Sort</h2>
+            <pre>
+                <code class="code-block">
+const simpleList = ["oranges", "grapes", "lemons", "apples", "Bananas", "watermelons", "coconuts", "broccoli", "mango"];
+                </code>
+            </pre>
+            <pre>
+                <code class="code-block">
+function compareFn(a,b) {
+  if (a < b) {
+    return -1;
+  } else if (a > b) {
+    return 1;
+  }
+ return 0;
+}
+                </code>
+            </pre>
+            <pre>
+                <code class="code-block">
+const products = [
+  {
+    productName: "Wireless Mouse",
+    price: 29.99
+  },
+  {
+    productName: "Bluetooth Keyboard",
+    price: 49.99
+  },
+  {
+    productName: "Laptop Stand",
+    price: 39.99
+  }
+];
+                </code>
+            </pre>
+            <h2>Practice Code - Filter</h2>
+            <pre>
+                <code class="code-block">
+const animals = [
+  {
+    name: "Lion",
+    traits: ["brave", "strong", "fierce", "wild"]
+  },
+  {
+    name: "Elephant",
+    traits: ["large", "gentle", "smart", "wild"]
+  },
+  {
+    name: "Fox",
+    traits: ["sly", "quick", "clever", "wild"]
+  },
+  {
+    name: "Dog",
+    traits: ["loyal", "friendly", "playful", "cuddly"]
+  },
+  {
+    name: "Cat",
+    traits: ["quiet", "independent", "curious", "cuddly"]
+  }
+];
+              </code>
+          </pre>
+        <h2>Putting it all together</h2>
+        <p>We want to use the hikes object array to allow user to search for terms related to hikes and each object's properties and arrays will be filtered according to the string they searched for. We will be looking for the search string in the hike name, the hike description, and the tags array for each hike. We will also display the difficulty property of each hike by displaying a number of boots for each level of difficulty.
+        </p>
+        <p>After the results are filtered they will be sorted by the distance of each hike.</p>
+        <p>A random hike will show up initially before the user searches.</p>
+        <p>This video demonstrates what it will look like.</p>
+        <video controls>
+          <source src="../videos/hikes.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <section class="accordion">
+          <h2>
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="started-topics-content"
+              id="started-topics-toggle"
+            >
+              <span class="caret" aria-hidden="true">▶</span>
+              Code to get Started
+            </button>
+          </h2>
+          <div
+            id="started-topics-content"
+            role="region"
+            aria-labelledby="started-topics-toggle"
+            hidden
+          >
+              
+                  <pre>
+                    <code class="code-block">
+const hikes = [
+  {
+    name: "Bechler Falls",
+    stub: "bechler_falls",
+    imgSrc:
+      "https://wdd131.netlify.app/examples/hikes/images/bechler-falls.jpg",
+    imgAlt: "Image of Bechler Falls",
+    distance: "3 miles",
+    tags: ["Caves", "Yellowstone", "Waterfall"],
+    difficulty: 1,
+    description:
+      "Beautiful short hike in Yellowstone along the Bechler river to Bechler Falls",
+    directions:
+      "Take Highway 20 north to Ashton. Turn right into the town and continue through. Follow that road for a few miles then turn left again onto the Cave Falls road.Drive to the end of the Cave Falls road. There is a parking area at the trailhead.",
+    trailhead: [44.14457, -110.99781]
+  },
+  {
+    name: "Teton Canyon",
+    stub: "teton_canyon",
+    imgSrc: "https://wdd131.netlify.app/examples/hikes/images/teton-canyon.jpg",
+    imgAlt: "Image of Teton Canyon",
+    distance: "3 miles",
+    tags: ["Canyon", "Tetons"],
+    difficulty: 1,
+    description: "Beautiful short (or long) hike through Teton Canyon.",
+    directions:
+      "Take Highway 33 East to Driggs. Turn left onto Teton Canyon Road. Follow that road for a few miles then turn right onto Staline Raod for a short distance, then left onto Alta Road. Veer right after Alta back onto Teton Canyon Road. There is a parking area at the trailhead.",
+    trailhead: [43.75567, -110.91521]
+  },
+  {
+    name: "Denanda Falls",
+    stub: "denanda_falls",
+    imgSrc:
+      "https://wdd131.netlify.app/examples/hikes/images/denanda-falls.jpg",
+    imgAlt: "Image of Denanda Falls",
+    distance: "7 miles",
+    tags: ["Caves", "Yellowstone", "Waterfall"],
+    difficulty: 3,
+    description: "Beautiful hike through Bechler meadows to Denanda Falls",
+    directions:
+      "Take Highway 20 north to Ashton. Turn right into the town and continue through. Follow that road for a few miles then turn left again onto the Cave Falls road. Drive to until you see the sign for Bechler Meadows on the left. Turn there. There is a parking area at the trailhead.",
+    trailhead: [44.14974, -111.04564]
+  },
+  {
+    name: "Coffee Pot Rapids",
+    stub: "coffee_pot",
+    imgSrc: "https://wdd131.netlify.app/examples/hikes/images/coffee-pot.jpg",
+    imgAlt: "Image of Bechler Falls",
+    distance: "2.2 miles",
+    tags: ["Rafting"],
+    difficulty: 1,
+    description:
+      "Beautiful hike along the Henry's Fork of the Snake River to a set of rapids.",
+    directions:
+      "Take Highway 20 north to Island Park. Continue almost to Mack's in. From Highway 20, turn west on Flatrock Road for 1 mile then turn off on Coffee Pot Road and travel one-half mile to the campground entrance road. There is a parking lot right outside the campground.",
+    trailhead: [44.49035, -111.36619]
+  },
+  {
+    name: "Menan Butte",
+    stub: "menan_butte",
+    imgSrc: "https://wdd131.netlify.app/examples/hikes/images/menan-butte.jpg",
+    imgAlt: "Image of Menan Butte",
+    distance: "3.4 miles",
+    tags: ["Volcanic", "View"],
+    difficulty: 2,
+    description:
+      "A steep climb to one of the largest volcanic tuff cones in the world. 3.4 miles is the full loop around the crater, can be shortened.",
+    directions:
+      "Take Highway 33 West out of Rexburg for about 8 miles. Turn left onto E Butte Road, the right onto Twin Butte road after about a mile. Follow that road for about 3 miles. You will see the parking lot/trailhead on the left.",
+    trailhead: [43.78555, -111.98996]
+  }
+];
+                    </code>
+                  </pre>
+              
+            </div>
+        </section>    
+        
+        <section class="accordion">
+          <h2>
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-controls="solution-topics-content"
+                id="solution-topics-toggle"
+              >
+                <span class="caret" aria-hidden="true">▶</span>
+                One Possible Solution
+              </button>
+            </h2>
+            <div
+              id="solution-topics-content"
+              role="region"
+              aria-labelledby="solution-topics-toggle"
+              hidden
+            >
+               <pre>
+                    <code class="code-block">
+function search() {
+
+    let hikeQuery = document.querySelector('#search').value;
+
+    let filteredHikes = hikes.filter(function(hike){
+        return ( 
+            hike.name.toLowerCase().includes(hikeQuery.toLowerCase()) ||
+            hike.description.toLowerCase().includes(hikeQuery.toLowerCase()) || 
+            hike.tags.find(tag => tag.toLowerCase().includes(hikeQuery.toLowerCase()))
+        );
+    })
+
+    console.log(filteredHikes);
+
+    function compareHikes(a,b) {
+    if (a.difficulty < b.difficulty) {
+        return -1;
+    } else if (a.difficulty > b.difficulty) {
+        return 1;
+    }
+    return 0;
+    }
+
+    let sortedHikes = filteredHikes.sort(compareHikes);
+
+    console.log(sortedHikes);
+
+    // clear out any previous content
+    hikeContainer.innerHTML = '';
+    // output onto screen
+    sortedHikes.forEach(function(hike){
+		renderHike(hike);
+	})
+
+}
+
+let hikeContainer = document.querySelector('#hike-container');
+
+let button = document.querySelector('button');
+
+button.addEventListener('click', search);
+
+let randomNum = Math.floor(Math.random() * hikes.length);
+console.log(randomNum);
+
+function tagTemplate(tags) {
+    return tags.map((tag)=> `&lt;button&gt;${tag}&lt;/button&gt;`).join(' ');
+}
+
+function difficultyTemplate(rating) {
+		let html = `&lt;span
+	class=&quot;rating&quot;
+	role=&quot;img&quot;
+	aria-label=&quot;Rating: ${rating} out of 5&quot;
+&gt;  Difficulty: `
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        html += `&lt;span aria-hidden=&quot;true&quot; class=&quot;icon-boot&quot;&gt; 🥾&lt;/span&gt;`
+      } else {
+        html += `&lt;span aria-hidden=&quot;true&quot; class=&quot;icon-empty&quot;&gt;▫️&lt;/span&gt;`
+      }			
+    }
+    html += `&lt;/span&gt;`
+    return html
+  }
+
+function hikesTemplate(hike) {
+    return `&lt;div class=&quot;hike-card&quot;&gt;
+  &lt;div class=&quot;hike-content&quot;&gt;
+    &lt;h2&gt;${hike.name}&lt;/h2&gt;
+    &lt;div class=&quot;hike-tags&quot;&gt;
+      ${tagTemplate(hike.tags)}
+    &lt;/div&gt;
+    &lt;p&gt;${hike.description}&lt;/p&gt;
+    &lt;p&gt;${difficultyTemplate(hike.difficulty)}&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;`
+}
+
+function renderHike(hike) {
+    let html = hikesTemplate(hike);
+    hikeContainer.innerHTML += html
+}
+
+function init() {
+    renderHike(hikes[randomNum]);
+}
+
+init();
+                    </code>
+               </pre>
+          </div>
+        </section>
+    </main>
+    <footer>
+      <p>Brigham Young University - Idaho <span id="year"></span></p>
+    </footer>
+  </div>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
