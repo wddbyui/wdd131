@@ -81,6 +81,7 @@ btn.forEach(button =>{
 let year = new Date();
 document.querySelector('#year').textContent = year.getFullYear();
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.getElementById("introduced-topics-toggle");
   const content = document.getElementById("introduced-topics-content");
@@ -103,16 +104,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//with copy button
+
 document.addEventListener("DOMContentLoaded", () => {
   const toggleStButton = document.getElementById("started-topics-toggle");
   const content = document.getElementById("started-topics-content");
+  const copyBtn = document.getElementById("copy-code-button");
 
   toggleStButton.addEventListener("click", () => {
     const expanded = toggleStButton.getAttribute("aria-expanded") === "true";
     toggleStButton.setAttribute("aria-expanded", String(!expanded));
     content.hidden = expanded;
   });
+
+  copyBtn.addEventListener("click", () => {
+    const code = content.querySelector("code").innerText;
+    navigator.clipboard.writeText(code).then(() => {
+      copyBtn.textContent = "Copied!";
+      setTimeout(() => (copyBtn.textContent = "Copy Code"), 1500);
+    }).catch(err => {
+      console.error("Failed to copy code: ", err);
+    });
+  });
 });
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggleSButton = document.getElementById("solution-topics-toggle");
