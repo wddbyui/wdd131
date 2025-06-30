@@ -187,13 +187,13 @@ const animals = [
               </code>
           </pre>
         <h2>Putting it all together</h2>
-        <p>We want to use the hikes object array to allow the user to search for terms related to hikes and each object's properties and arrays will be filtered according to the string they searched for. We will be looking for the search string in the hike name, the hike description, and the tags array for each hike. We will also display the difficulty property of each hike by displaying a number of boots for each level of difficulty.
+        <p>We want to use the hikes object array (see Code to get Started below) to allow the user to search for terms related to hikes and each object's properties and arrays will be filtered according to the string searched. We will be looking for the search string in the hike name, the hike description, and the tags array for each hike. We will also display the difficulty property of each hike by displaying a number of boots 🥾 for each level of difficulty and remaining place holders as ▫️ emoji.
         </p>
         <p>After the results are filtered they will be sorted by the distance of each hike.</p>
         <p>A random hike will show up initially before the user searches.</p>
         <p>This video demonstrates what it will look like.</p>
         <video controls>
-          <source src="../videos/hikes.mp4" type="video/mp4">
+          <source src="../videos/hikes-filter-sort.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <section class="accordion">
@@ -214,7 +214,11 @@ const animals = [
             aria-labelledby="started-topics-toggle"
             hidden
           >
-              
+            <button id="copy-code-button" class="copy-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+            </svg>
+            Copy Code</button>  
                   <pre>
                     <code class="code-block">
 const hikes = [
