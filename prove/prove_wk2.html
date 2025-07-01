@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prove - Week 1</title>
+    <meta name="description" content="Curriculum for the BYUI WDD 131 course">
+    <meta name="author" content="Julie Ann Anderson">
+    <meta property="og:site_name" content="WDD 131 Dynamic Web Fundamentals">
+    <meta property="og:title" content="JS">
+    <meta property="og:description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:url" content="https://wddbyui.github.io/wdd131/">
+    <meta property="og:locale" content="en_us">
+    <meta name="twitter:card" content="summary">
+    <link rel="apple-touch-icon" sizes="157x157" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" href="../images/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+    <header class="banner">
+      <div class="banner-left">
+        <span class="web">WEB</span>
+        <div class="title">
+          <div>DYNAMIC</div>
+          <div>FUNDAMENTALS</div>
+        </div>
+      </div>
+      <div class="banner-right">
+        WDD 131
+      </div>
+    </header>
+    <main>
+        <div id="content">
+            <h1>Prove - DOM Manipulation</h1>
+            <section class="accordion">
+            <h2>
+                <button type="button" aria-expanded="false" aria-controls="introduced-topics-content" id="introduced-topics-toggle" class="button">
+                <span class="caret" aria-hidden="true">▶</span>
+                Introduced Topics
+                </button>
+            </h2>
+            <div id="introduced-topics-content" class="content" role="region" aria-labelledby="introduced-topics-toggle" hidden>
+                <ul class="list">
+                    <li>
+                    <h3>.querySelector()</h3>
+                    <p>The .querySelector() method returns the first child element that matches a specified CSS selector of an element.</p>
+                    </li>
+                    <pre>
+                        <code class="code-block">
+// Targeting an element in the HTML with a class of 'example' and giving it a new background color.                         
+document.querySelector(".example").style.backgroundColor = "red";
+                        </code>
+                    </pre>
+                    <li>
+                    <h3>.getElementById()</h3>
+                    <p>The .getElementById() method returns an element with a specified id.</p>
+                    </li>
+                    <pre>
+                        <code class="code-block">
+// Targeting an element in HTML with the id of content and assigning it to a constant.
+const myElement = document.getElementById("content");
+                        </code>
+                    </pre>
+                    <li>
+                    <h3>.setAttribute()</h3>
+                    <p>The .setAttribute() method sets a new value to an attribute.</p>
+                    <p>It contains two required parameters. The name of the attribute and the new value.</p>
+                    </li>
+                    <pre>
+                        <code class="code-block">
+// Setting the image element in HTML with a new source attribute.getElementById("myImg").setAttribute("src", "portrait.webp"); 
+                        </code>
+                    </pre>
+                    <li>
+                    <h3>.style</h3>
+                    <p>The .style property can returns or assign the values of an elements style attribute.</p>
+                    <pre>
+                        <code class="code-block">
+// Setting the font color of an element to red                          
+document.getElementById("myH1").style.color = "red";
+                        </code>
+                    </pre>
+                    </li>
+                    <li>
+                    <h3>.className</h3>
+                    <p>The .className property sets or returns an element's class attribute.</p>
+                    <pre>
+                        <code class="code-block">
+// Assigning a new class of mystyle to an element
+document.getElementById("myDIV").className = "mystyle";
+                        </code>
+                    </pre>
+                    </li>
+                    <li>
+                    <h3>.classList</h3>
+                    <p>The .classList property returns the CSS classnames of an element.</p>
+<pre>
+                        <code class="code-block">
+// Adding the 'myStyle' class to an element.
+const list = element.classList;
+list.add("myStyle");
+                        </code>
+                    </pre>
+                    <p>.classList can also be used with .remove() and .toggle()</p>
+                    </li>
+                    <li>
+                    <h3>.value</h3>
+                    <p>The .value property sets or returns the value of an attribute.</p>
+                    <p>Commonly used to get user input from input boxes or dropdown menus.</p>
+                    <pre>
+                        <code class="code-block">
+// Getting the current value from an element.
+let elem = document.querySelector('select');
+let current = elem.value;
+                        </code>
+                   
+                    </pre>
+                    </li>
+                </ul>
+                </div>
+            </section>    
+            <h2>Mission Statement Part 2 - Dark and Light Mode</h2>
+            <p>Continue working with the Mission Statement page that was created. JavaScript will be added to allow a user to choose a dark or light theme for the page.</p>
+            <p>This video shows how it will run when completed.</p>
+
+            <h2>Computational Thinking</h2>
+            <p>Using our ponder theme changer activity as a guide, think through the steps that will be needed to create this project.</p>
+            <p>We have not gone over event listeners, functions, and conditional if clauses, but using the ponder activity as a guide will help.</p> 
+            <p>This is the dark mode logo image that you can use:</p>
+            <img src=""
+            
+
+
+
+
+
+        </div>
+    </main>
+    <footer>
+      <p>Brigham Young University - Idaho <span id="year"></span></p>
+    </footer>
+    </div>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

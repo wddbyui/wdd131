@@ -63,103 +63,71 @@ let original = `<input type="radio" id="tab1" name="tabs" checked>
           </div>
         </div>`;
 
-btn.forEach(button =>{
-    button.addEventListener('click', function(e){
-        let pdf = e.target.id;
-        console.log(pdf);
-        console.log(e.target.className);
-        if (e.target.className == 'ponder') {
-            js_content_tab.innerHTML = "";
-            renderJsText(pdf);
-        } else if (e.target.className == 'prove') {
-            html_content_tab.innerHTML = "";
-            renderHtmlText(pdf);
-        };        
-    })
-})
+// btn.forEach(button =>{
+//     button.addEventListener('click', function(e){
+//         let pdf = e.target.id;
+//         console.log(pdf);
+//         console.log(e.target.className);
+//         if (e.target.className == 'ponder') {
+//             js_content_tab.innerHTML = "";
+//             renderJsText(pdf);
+//         } else if (e.target.className == 'prove') {
+//             html_content_tab.innerHTML = "";
+//             renderHtmlText(pdf);
+//         };        
+//     })
+// })
 
 let year = new Date();
 document.querySelector('#year').textContent = year.getFullYear();
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleButton = document.getElementById("introduced-topics-toggle");
-  const content = document.getElementById("introduced-topics-content");
+  const toggleButton = document.querySelectorAll(".button");
+  
+  
+  toggleButton.forEach(button => {
+    button.addEventListener("click", () => {
+      const contentId = button.getAttribute("aria-controls");
+      const content = document.getElementById(contentId);
 
-  toggleButton.addEventListener("click", () => {
-    const expanded = toggleButton.getAttribute("aria-expanded") === "true";
-    toggleButton.setAttribute("aria-expanded", String(!expanded));
-    content.hidden = expanded;
-  });
-});
+      if (!content) {
+        console.warn(`No content element found with ID: ${contentId}`);
+        return;
+      }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleRButton = document.getElementById("review-topics-toggle");
-  const content = document.getElementById("review-topics-content");
+      const expanded = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", String(!expanded));
+      content.hidden = expanded;
 
-  toggleRButton.addEventListener("click", () => {
-    const expanded = toggleRButton.getAttribute("aria-expanded") === "true";
-    toggleRButton.setAttribute("aria-expanded", String(!expanded));
-    content.hidden = expanded;
-  });
-});
+    });
+  })
 
-//with copy button
+  const copyBtn = document.querySelectorAll(".copy-button");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleStButton = document.getElementById("started-topics-toggle");
-  const content = document.getElementById("started-topics-content");
-  const copyBtn = document.getElementById("copy-code-button");
+  copyBtn.forEach(function(copyBtn){
+    copyBtn.addEventListener("click", () => {
+    const codeBlock = copyBtn.nextElementSibling?.querySelector("code");
+    if (!codeBlock) return;
+    const codeText = codeBlock.innerText;
 
-  toggleStButton.addEventListener("click", () => {
-    const expanded = toggleStButton.getAttribute("aria-expanded") === "true";
-    toggleStButton.setAttribute("aria-expanded", String(!expanded));
-    content.hidden = expanded;
-  });
-
-  copyBtn.addEventListener("click", () => {
-    const code = content.querySelector("code").innerText;
-    navigator.clipboard.writeText(code).then(() => {
+    
+    navigator.clipboard.writeText(codeText).then(() => {
       copyBtn.textContent = "Copied!";
-      setTimeout(() => (copyBtn.textContent = "Copy Code"), 1500);
+      setTimeout(() => {copyBtn.innerHTML = `
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+              </svg>
+              Copy Code
+            `;
+          }, 1500);
     }).catch(err => {
       console.error("Failed to copy code: ", err);
     });
+    
   });
-});
+  })
+  
+})
 
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleSButton = document.getElementById("solution-topics-toggle");
-  const content = document.getElementById("solution-topics-content");
-
-  toggleSButton.addEventListener("click", () => {
-    const expanded = toggleSButton.getAttribute("aria-expanded") === "true";
-    toggleSButton.setAttribute("aria-expanded", String(!expanded));
-    content.hidden = expanded;
-  });
-});
-
-
-// Accordian
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     const toggleButton = document.getElementById("introduced-topics-toggle");
-//     const content = document.getElementById("introduced-topics-content");
-
-//     toggleButton.addEventListener("click", function () {
-//       const expanded = toggleButton.getAttribute("aria-expanded") === "true";
-
-//       // Toggle the aria-expanded attribute
-//       toggleButton.setAttribute("aria-expanded", !expanded);
-
-//       // Toggle the visibility of the content
-//       if (expanded) {
-//         content.setAttribute("hidden", "");
-//       } else {
-//         content.removeAttribute("hidden");
-//       }
-//     });
-//   });
 

@@ -36,23 +36,13 @@
         <h1>Ponder - Filtering and Sorting</h1>
         <section class="accordion">
           <h2>
-            <button
-              type="button"
-              aria-expanded="false"
-              aria-controls="introduced-topics-content"
-              id="introduced-topics-toggle"
-            >
+            <button type="button" aria-expanded="false" aria-controls="introduced-topics-content" id="introduced-topics-toggle" class="button">
               <span class="caret" aria-hidden="true">▶</span>
               Introduced Topics
             </button>
           </h2>
-          <div
-            id="introduced-topics-content"
-            role="region"
-            aria-labelledby="introduced-topics-toggle"
-            hidden
-          >
-              <ul class="intro">
+          <div id="introduced-topics-content" class="content" role="region" aria-labelledby="introduced-topics-toggle" hidden>
+              <ul class="list">
                 <li>
                   <h3>Sorting with .sort()</h3>
                   <p>The .sort() method reorders the items in an array based on rules you define.</p>
@@ -95,23 +85,13 @@ for (let i = 0; i &lt; 5; i++) {
         
         <section class="accordion">
           <h2>
-              <button
-                type="button"
-                aria-expanded="false"
-                aria-controls="review-topics-content"
-                id="review-topics-toggle"
-              >
+              <button type="button" aria-expanded="false" aria-controls="review-topics-content" id="review-topics-toggle" class="button">
                 <span class="caret" aria-hidden="true">▶</span>
                 Review Topics
               </button>
             </h2>
-            <div
-              id="review-topics-content"
-              role="region"
-              aria-labelledby="review-topics-toggle"
-              hidden
-            >
-                <ul class="review">
+            <div id="review-topics-content" class="content" role="region" aria-labelledby="review-topics-toggle" hidden>
+                <ul class="list">
                   <li>
                     <h4>Filtering with .filter()</h4>
                     <p>The .filter() method works with an array. It will create a new array that only includes the array items that match a certain condition.</p>
@@ -124,11 +104,24 @@ for (let i = 0; i &lt; 5; i++) {
           </div>
         </section>
         <h2>Practice Code - Sort</h2>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button> 
             <pre>
                 <code class="code-block">
 const simpleList = ["oranges", "grapes", "lemons", "apples", "Bananas", "watermelons", "coconuts", "broccoli", "mango"];
                 </code>
+        
             </pre>
+        <button class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button> 
             <pre>
                 <code class="code-block">
 function compareFn(a,b) {
@@ -141,6 +134,12 @@ function compareFn(a,b) {
 }
                 </code>
             </pre>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button> 
             <pre>
                 <code class="code-block">
 const products = [
@@ -158,8 +157,15 @@ const products = [
   }
 ];
                 </code>
+        
             </pre>
             <h2>Practice Code - Filter</h2>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button> 
             <pre>
                 <code class="code-block">
 const animals = [
@@ -198,29 +204,20 @@ const animals = [
         </video>
         <section class="accordion">
           <h2>
-            <button
-              type="button"
-              aria-expanded="false"
-              aria-controls="started-topics-content"
-              id="started-topics-toggle"
-            >
+            <button type="button" aria-expanded="false" aria-controls="started-topics-content" id="started-topics-toggle" class="button">
               <span class="caret" aria-hidden="true">▶</span>
               Code to get Started
             </button>
           </h2>
-          <div
-            id="started-topics-content"
-            role="region"
-            aria-labelledby="started-topics-toggle"
-            hidden
-          >
-            <button id="copy-code-button" class="copy-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
-    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
-            </svg>
-            Copy Code</button>  
-                  <pre>
-                    <code class="code-block">
+          <div id="started-topics-content" class="content" role="region" aria-labelledby="started-topics-toggle" hidden>
+            <button  class="copy-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+      <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+              </svg>
+              Copy Code
+            </button>  
+              <pre>
+                <code class="code-block">
 const hikes = [
   {
     name: "Bechler Falls",
@@ -293,32 +290,27 @@ const hikes = [
     trailhead: [43.78555, -111.98996]
   }
 ];
-                    </code>
-                  </pre>
-              
+                </code>
+              </pre>
             </div>
         </section>    
         
         <section class="accordion">
           <h2>
-              <button
-                type="button"
-                aria-expanded="false"
-                aria-controls="solution-topics-content"
-                id="solution-topics-toggle"
-              >
-                <span class="caret" aria-hidden="true">▶</span>
-                One Possible Solution
-              </button>
-            </h2>
-            <div
-              id="solution-topics-content"
-              role="region"
-              aria-labelledby="solution-topics-toggle"
-              hidden
-            >
-               <pre>
-                    <code class="code-block">
+            <button type="button" aria-expanded="false" aria-controls="solution-topics-content" id="solution-topics-toggle" class="button">
+              <span class="caret" aria-hidden="true">▶</span>
+              One Possible Solution
+            </button>
+          </h2>
+          <div id="solution-topics-content" class="content" role="region" aria-labelledby="solution-topics-toggle" hidden>
+          <button  class="copy-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+            </svg>
+            Copy Code
+          </button> 
+            <pre>
+                <code class="code-block">
 function search() {
 
     let hikeQuery = document.querySelector('#search').value;
@@ -408,8 +400,8 @@ function init() {
 }
 
 init();
-                    </code>
-               </pre>
+                </code>
+            </pre>
           </div>
         </section>
     </main>
