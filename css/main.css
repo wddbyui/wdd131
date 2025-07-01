@@ -10,11 +10,13 @@ header, footer {
     display: flex;
     flex-direction: column;
     align-content: space-between;
+   
 }
 #content {
     font-family: Calibri, 'Trebuchet MS', sans-serif, 'Times New Roman', Times, serif;
     max-width: 80%;
     margin: 62px auto;
+     max-width: 1000px;
 }
 p, li {
   font-size: 1.2em;
@@ -35,6 +37,7 @@ pre {
   border-radius: 4px;
   background-color: #dddcdc;
   padding: 10px 20px 0 20px;
+  margin-top: 3px;
 }
 .code-block {
   white-space: pre-wrap;     /* Wrap lines instead of scrolling horizontally */
@@ -97,7 +100,7 @@ a{
     color: #000;
 }
 /* Accordian */
-.accordion button {
+.accordion .button {
   font-size: 1.25rem;
   background: none;
   border: none;
@@ -107,7 +110,7 @@ a{
   padding: 5px;
 }
 
-.accordion button:focus {
+.accordion .button:hover {
   outline: 2px solid #005fa3;
   outline-offset: 2px;
 }
@@ -117,36 +120,31 @@ a{
 }
 
 .copy-button {
-  background-color: #0077cc;
-  color: white;
   border: none;
-  padding: 0.4em 0.8em;
+  background: none;
+  padding: .5em 0.8em 0 .8em;
   font-size: 0.9rem;
-  border-radius: 4px;
   cursor: pointer;
-  margin-bottom: 0.5em;
+  color: #908f8f;
 }
 
 .copy-button:hover {
-  background-color: #005fa3;
-  color: white;
+  color: #575757;
 }
 
-#copy-code-button {
-  color: #aaa;
-}
 
-button .caret {
+
+.button .caret {
   display: inline-block;
   transition: transform 0.3s ease;
   margin-right: 0.5em;
 }
 
 /* Rotate caret when expanded */
-button[aria-expanded="true"] .caret {
+.button[aria-expanded="true"] .caret {
   transform: rotate(90deg);
 }
- div .intro, div .review, div .solution, div .started {
+ .list {
   background-color: #dddcdc;
   font-size: .8em;
   padding-top: 5px;
@@ -175,9 +173,9 @@ footer p {
 
 
 /* All pages */
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1000px) {
     #content {
-      max-width: 75%;
+      max-width: 95%;
     }
     .web, .title, .banner-right {
         font-size: 1.5rem;
