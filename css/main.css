@@ -25,6 +25,9 @@ p, li {
 h2 {
   margin-top: 40px;
 }
+h3 {
+  font-size: 1.25em;
+}
 main {
     flex: 1;
 }
@@ -55,6 +58,9 @@ em {
 }
 .moz:hover {
   color:#00509d
+}
+.submit {
+  font-size: 1.5em;
 }
 
 /* Banner */
@@ -167,7 +173,13 @@ footer p {
 }
 
 /* ---- per page ---- */
-
+/* prove week 2 - dark mode */
+#logo {
+  background-color: #003566;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+}
 
 
 
