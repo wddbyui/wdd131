@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponder - Unit1B</title>
+    <meta name="description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:site_name" content="WDD 131 Dynamic Web Fundamentals">
+    <meta property="og:title" content="JS">
+    <meta property="og:description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:url" content="https://wddbyui.github.io/wdd131/">
+    <meta property="og:locale" content="en_us">
+    <meta name="twitter:card" content="summary">
+    <link rel="apple-touch-icon" sizes="157x157" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" href="../images/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+    <header class="banner">
+      <div class="banner-left">
+        <span class="web">WEB</span>
+        <div class="title">
+          <div>DYNAMIC</div>
+          <div>FUNDAMENTALS</div>
+        </div>
+      </div>
+      <div class="banner-right">
+        WDD 131
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <h1>Ponder - DOM Manipulation</h1>
+        <section class="accordion">
+            <h2>
+                <button type="button" aria-expanded="false" aria-controls="introduced-topics-content" id="introduced-topics-toggle" class="button">
+                <span class="caret" aria-hidden="true">▶</span>
+                Introduced Topics
+                </button>
+            </h2>
+            <div id="introduced-topics-content" class="content" role="region" aria-labelledby="introduced-topics-toggle" hidden>
+                <ul class="list">
+                    <li>
+                    <h3>.querySelector()</h3>
+                    <p>The .querySelector() method returns the first child element that matches a specified CSS selector of an element.</p>
+                    </li>
+                    <pre>
+                        <code class="code-block">
+// Targeting an element in the HTML with a class of 'example' and giving it a new background color.                         
+document.querySelector(".example").style.backgroundColor = "red";
+                        </code>
+                    </pre>
+                    <li>
+                    <h3>.getElementById()</h3>
+                    <p>The .getElementById() method returns an element with a specified id.</p>
+                    </li>
+                    <pre>
+                        <code class="code-block">
+// Targeting an element in HTML with the id of content and assigning it to a constant.
+const myElement = document.getElementById("content");
+                        </code>
+                    </pre>
+                    <li>
+                    <h3>.setAttribute()</h3>
+                    <p>The .setAttribute() method sets a new value to an attribute.</p>
+                    <p>It contains two required parameters. The name of the attribute and the new value.</p>
+                    </li>
+                    <pre>
+                        <code class="code-block">
+// Setting the image element in HTML with a new source attribute.
+document.getElementById("myImg").setAttribute("src", "portrait.webp"); 
+                        </code>
+                    </pre>
+
+                    <li>
+                    <h3>.textContent()</h3>
+                    <p>The .textContent property sets or returns text content.</p>
+                    </li>
+                    <pre>
+                        <code class="code-block">
+// Setting an elements HTML text content.
+document.querySelector("elem").textContent = "I have changed!";
+                        </code>
+                    </pre>
+
+
+                    <li>
+                    <h3>.style</h3>
+                    <p>The .style property can returns or assign the values of an elements style attribute.</p>
+                    <pre>
+                        <code class="code-block">
+// Setting the font color of an element to red                          
+document.getElementById("myH1").style.color = "red";
+                        </code>
+                    </pre>
+                    </li>
+                    <li>
+                    <h3>.className</h3>
+                    <p>The .className property sets or returns an element's class attribute.</p>
+                    <pre>
+                        <code class="code-block">
+// Assigning a new class of mystyle to an element
+document.getElementById("myDIV").className = "mystyle";
+                        </code>
+                    </pre>
+                    </li>
+                    <li>
+                    <h3>.classList</h3>
+                    <p>The .classList property returns the CSS classnames of an element.</p>
+<pre>
+                        <code class="code-block">
+// Adding the 'myStyle' class to an element.
+const list = element.classList;
+list.add("myStyle");
+                        </code>
+                    </pre>
+                    <p>.classList can also be used with .remove() and .toggle()</p>
+                    </li>
+                    <li>
+                    <h3>.value</h3>
+                    <p>The .value property sets or returns the value of an attribute.</p>
+                    <p>Commonly used to get user input from input boxes or dropdown menus.</p>
+                    <pre>
+                        <code class="code-block">
+// Getting the current value from an element.
+let elem = document.querySelector('select');
+let current = elem.value;
+                        </code>   
+                    </pre>
+                    </li>
+                </ul>
+                </div>
+            </section>    
+
+        <p>DOM stands for Document Object Model which is refers to the HTML elements on a web page. 'DOM Manipulation' is using JavaScript to make changes after the page has loaded. This includes changing the structure, style, or content of a web page by adding, removing, or updating HTML elements or attributes.</p>
+        <h2>Practice Code - DOM Manipulation</h2>
+
+
+<section class="accordion">
+          <h2>
+              <button type="button" aria-expanded="false" aria-controls="review-topics-content" id="review-topics-toggle" class="button">
+                <span class="caret" aria-hidden="true">▶</span>
+                Starting Code - if needed
+              </button>
+            </h2>
+            <div id="review-topics-content" class="content" role="region" aria-labelledby="review-topics-toggle" hidden>
+                <ul class="list">
+                  <li>
+        <h3>HTML</h3>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button> 
+            <pre>
+                <code class="code-block">
+&lt;body&gt;
+    &lt;div id=&quot;content&quot;&gt;
+        &lt;h1&gt;HTML, CSS, and JS&lt;/h1&gt;
+        
+        &lt;p&gt;The foundational technologies that power websites and web applications&lt;/p&gt;
+        &lt;hr&gt;
+        &lt;img src=&quot;https://wddbyui.github.io/wdd131/images/trifecta.png&quot; alt=&quot;JS, CSS, and HTML logos&quot;&gt;
+        &lt;div id=&quot;topics&quot;&gt;
+            &lt;h2&gt;HyperText Markup Language&lt;/h2&gt;
+            &lt;ul class=&quot;list&quot;&gt;
+                &lt;li&gt;Defines the structure and content of a web page.&lt;/li&gt;
+                &lt;li&gt;Without HTML there's nothing for the browser to display.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h2&gt;Cascading Style Sheets&lt;/h2&gt;
+            &lt;ul class=&quot;list&quot;&gt;
+                &lt;li&gt;Controls how the HTML elements look.&lt;/li&gt;
+                &lt;li&gt;Without CSS pages look plain and unstyled.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h2&gt;JavaScript&lt;/h2&gt;
+            &lt;ul class=&quot;list&quot;&gt;
+                &lt;li&gt;Adds interactivity and dynamic behavior.&lt;/li&gt;
+                &lt;li&gt;Without JavaScript nothing on the page responds dynamically to user actions.&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+                </code>
+            </pre>
+            <h3>CSS</h3>
+            <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button> 
+            <pre>
+                <code class="code-block">
+body {
+    background-color: #ddd;
+    font-size: 20px;
+}
+#content {
+    max-width: 60%;
+    margin: 40px auto;
+    border: 1px solid darkgrey;
+    padding: 50px;
+}
+p {
+    color: #035f9c;
+    font-size: 1.3em;
+}
+hr {
+    height: 3px;
+    background-color: #035f9c;
+    margin: 30px auto;
+    width: 80%;
+}
+h1, h2, p {
+    text-align: center;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+#topics {
+    width: 55%;
+    margin: 0 auto;
+    line-height: 1.5em;
+}
+.list {
+    list-style-type: none;
+}
+                </code>
+            </pre>
+                  </li>
+                </ul>
+          </div>
+        </section>
+<h3>Practice Code</h3>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button> 
+            <pre>
+                <code class="code-block">
+&lt;label for=&quot;code&quot;&gt;Choose One:&lt;/label&gt;<br />
+&nbsp;&lt;select name=&quot;code&quot; id=&quot;webdevlist&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Choose One:&lt;/option&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value=&quot;html&quot;&gt;HTML&lt;/option&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value=&quot;css&quot;&gt;CSS&lt;/option&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value=&quot;js&quot;&gt;JavaScript&lt;/option&gt;<br />
+&nbsp;&lt;/select&gt;                   
+                </code>
+            </pre>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button> 
+            <pre>
+                <code class="code-block">
+let selectElem = document.getElementById('webdevlist');
+selectElem.addEventListener('change', function(){
+    let codeValue = selectElem.value;
+    console.log(codeValue);
+})
+                </code>
+            </pre>
+      </div>
+    </main>
+    <footer>
+      <p>Brigham Young University - Idaho <span id="year"></span></p>
+    </footer>
+    </div>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

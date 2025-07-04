@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponder - Unit1A</title>
+    <meta name="description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:site_name" content="WDD 131 Dynamic Web Fundamentals">
+    <meta property="og:title" content="JS">
+    <meta property="og:description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:url" content="https://wddbyui.github.io/wdd131/">
+    <meta property="og:locale" content="en_us">
+    <meta name="twitter:card" content="summary">
+    <link rel="apple-touch-icon" sizes="157x157" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" href="../images/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+    <header class="banner">
+      <div class="banner-left">
+        <span class="web">WEB</span>
+        <div class="title">
+          <div>DYNAMIC</div>
+          <div>FUNDAMENTALS</div>
+        </div>
+      </div>
+      <div class="banner-right">
+        WDD 131
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <h1>Ponder - Meta Tags & CSS Review</h1>
+          <section class="accordion">
+            <h2>
+                <button type="button" aria-expanded="false" aria-controls="introduced-topics-content" id="introduced-topics-toggle" class="button">
+                <span class="caret" aria-hidden="true">▶</span>
+                Introduced Topics
+                </button>
+            </h2>
+            <div id="introduced-topics-content" class="content" role="region" aria-labelledby="introduced-topics-toggle" hidden>
+                <ul class="list">
+                    <li>
+                    <h3>meta tag</h3>
+                    <p>The meta tag defines metadata or information about your HTML document. </p>
+                    <p>meta tags always go inside the head element and are used to specify the character set, the page description, the author of the document, viewport settings, etc.</p>
+                    <p>The browser will use this data but they do not display on the page.</p>
+                    </li>
+                    <pre>
+                        <code class="code-block">
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br />
+&lt;meta name=&quot;description&quot; content=&quot;An in-depth guide to HTML meta tags.&quot;&gt;<br />
+&lt;meta name=&quot;author&quot; content=&quot;Jane Doe&quot;&gt;
+                        </code>
+                    </pre>
+                    <li>
+                    <h3>CSS Selectors</h3>
+                    <table>
+                      <tr>
+                        <th>Selector</th>
+                        <th>Example</th>
+                        <th>Description</th>
+                      </tr>
+                      <tr>
+                        <td>element</td>
+                        <td>h2</td>
+                        <td>Selects all h2 elements</td>
+                      </tr>
+                      <tr>
+                        <td>#id</td>
+                        <td>#topics</td>
+                        <td>Selects the elements with id="topics"</td>
+                      </tr>
+                      <tr>
+                        <td>.class</td>
+                        <td>.list</td>
+                        <td>Selects all elements with the class="list"</td>
+                      </tr>
+                    </table>
+                    </li>
+                    <li>
+                    <h3>CSS Combinators</h3>
+                    <p>A combinator is a sign that explains the relationship between selectors.</p>
+                    <table>
+                      <tr>
+                        <th>Sign</th>
+                        <th>Example</th>
+                        <th>Result</th>
+                      </tr>
+                      <tr>
+                        <td>(a single space)</td>
+                        <td>div p</td>
+                        <td>Selects the p elements inside the div</td>
+                      </tr>
+                      <tr>
+                        <td>,</td>
+                        <td>div, p</td>
+                        <td>Selects all div elements and all the p elements</td>
+                      </tr>
+                      <tr>
+                        <td>></td>
+                        <td>div > p</td>
+                        <td>Selects all p elements that are direct children of a div</td>
+                      </tr>
+                      <tr>
+                        <td>+</td>
+                        <td>div + p</td>
+                        <td>Selects the first p elements that is immediately after the div</td>
+                      </tr>
+                      <tr>
+                        <td>~</td>
+                        <td>h2 ~ p</td>
+                        <td>Selects all the p elements that are preceded by a h2 element</td>
+                      </tr>
+                    </table>
+                    </li>
+                    <li>
+                    <h3>Pseudo-Class Selectors</h3>
+                    <table>
+                      <tr>
+                        <th>Example</th>
+                        <th>Description</th>
+                      </tr>
+                      <tr>
+                        <td>a:hover</td>
+                        <td>Selects the a element that is being hovered over</td>
+                      </tr>
+                      <tr>
+                        <td>li:nth-of-type(2)</td>
+                        <td>Selects only the second li</td>
+                      </tr>
+                    </table>
+                    </li>
+                </ul>
+                </div>
+            </section>    
+            <h3>Practice Code</h3>
+              <button  class="copy-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+      <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+              </svg>
+              Copy Code
+            </button> 
+            <pre>
+                  <code class="code-block">
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br />
+&lt;meta name=&quot;description&quot; content=&quot;An in-depth guide to HTML meta tags.&quot;&gt;<br />
+&lt;meta name=&quot;author&quot; content=&quot;Jane Doe&quot;&gt;
+                  </code>
+            </pre>
+        
+            <button  class="copy-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+      <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+              </svg>
+              Copy Code
+            </button> 
+                <pre>
+                  <code class="code-block">
+&lt;body&gt;
+    &lt;div id=&quot;content&quot;&gt;
+        &lt;h1&gt;HTML, CSS, and JS&lt;/h1&gt;
+        
+        &lt;p&gt;The foundational technologies that power websites and web applications&lt;/p&gt;
+        &lt;hr&gt;
+        &lt;img src=&quot;https://wddbyui.github.io/wdd131/images/trifecta.png&quot; alt=&quot;JS, CSS, and HTML logos&quot;&gt;
+        &lt;div id=&quot;topics&quot;&gt;
+            &lt;h2&gt;HyperText Markup Language&lt;/h2&gt;
+            &lt;ul class=&quot;list&quot;&gt;
+                &lt;li&gt;Defines the structure and content of a web page.&lt;/li&gt;
+                &lt;li&gt;Without HTML there's nothing for the browser to display.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h2&gt;Cascading Style Sheets&lt;/h2&gt;
+            &lt;ul class=&quot;list&quot;&gt;
+                &lt;li&gt;Controls how the HTML elements look.&lt;/li&gt;
+                &lt;li&gt;Without CSS pages look plain and unstyled.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h2&gt;JavaScript&lt;/h2&gt;
+            &lt;ul class=&quot;list&quot;&gt;
+                &lt;li&gt;Adds interactivity and dynamic behavior.&lt;/li&gt;
+                &lt;li&gt;Without JavaScript nothing on the page responds dynamically to user actions.&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+                    </code>
+                </pre>
+
+
+      </div>
+    </main>
+    <footer>
+      <p>Brigham Young University - Idaho <span id="year"></span></p>
+    </footer>
+    </div>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

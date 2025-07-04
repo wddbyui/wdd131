@@ -158,6 +158,11 @@ a{
   padding-bottom: 5px;
 }
 
+/* Tables */
+th, td {
+  padding: 5px 10px;
+}
+
 /* Footer */
 footer {
     background: linear-gradient(to right, #000814, #003566, #00509d);
@@ -171,6 +176,7 @@ footer p {
     text-align: center;
     margin: 0;
 }
+
 
 /* ---- per page ---- */
 /* prove week 2 - dark mode */
