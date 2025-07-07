@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prove - Week 2</title>
+    <title>Prove - Week 1</title>
     <meta name="description" content="Curriculum for the BYUI WDD 131 course">
     <meta name="author" content="Julie Ann Anderson">
     <meta property="og:site_name" content="WDD 131 Dynamic Web Fundamentals">
@@ -33,32 +33,28 @@
     </header>
     <main>
         <div id="content">
-            <h1>Prove - DOM Manipulation</h1>
+            <h1>Prove - HTML/CSS Review</h1>
 
-            <h2>Mission Statement Part 2 - Dark and Light Mode</h2>
+            <h2>Mission Statement Part 1 - Recreate the University mission statement</h2>
             <h3>File Management:</h3>
-            <p>Your project should be in a folder called 'mission'. Make sure you have an index.html page and a separate JavaScript and CSS file. </p>
+            <p>Create a folder called 'mission'. Create a file called index.html within that folder. Create a separate CSS file and link it to the index.html file. </p>
             <h3>Instructions:</h3>
-            <p>Continue working with the Mission Statement page that was created. JavaScript will be added to allow a user to choose a dark or light theme for the page.</p>
-            <p>This video shows how it will run when completed.</p>
-            <video controls>
-              <source src="../videos/dark-mode.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <h2>Computational Thinking</h2>
-            <p>Using our ponder theme changer activity as a guide, think through the steps that will be needed to create this project.</p>
-            <p>We have not gone over event listeners, functions, and conditional if clauses, but using the ponder activity as a guide will help.</p> 
-            <section class="accordion">
+            <p>Re-create the University Mission Statement using HTML and CSS. Pay close attention to detail to get it to look like the example below.</p>
+            <img class='mockup' src="../images/mission-statement-mockup.png" alt="BYUI mission statement">
+            <h2>HTML and CSS</h2>
+            <p>Using our ponder activity as a guide, create the index.html page in the mission folder to look like the example.</p> 
+            <p>Include at least the following meta tags in the head section: viewport, description, author, and charset</p>
+                        <section class="accordion">
           <h2>
             <button type="button" aria-expanded="false" aria-controls="introduced-topics-content" id="introduced-topics-toggle" class="button">
               <span class="caret" aria-hidden="true">▶</span>
-              Starting Code if Needed
+              Text to use
             </button>
           </h2>
           <div id="introduced-topics-content" class="content" role="region" aria-labelledby="introduced-topics-toggle" hidden>
               <ul class="list">
                 <li>
-                  <h3>HTML addition:</h3>
+                  <h3>HTML content:</h3>
                   <button  class="copy-button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
             <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
@@ -67,48 +63,17 @@
                   </button>  
                   <pre>
                     <code class="code-block">
-&lt;select&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Choose Mode&lt;/option&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value=&quot;dark&quot;&gt;Dark&lt;/option&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value=&quot;light&quot;&gt;Light&lt;/option&gt;<br>
-&lt;/select&gt;              
-                    </code>
-                  </pre>
-                  <h3>Beginning JavaScript:</h3>
-                  <button  class="copy-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
-            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
-                    </svg>
-                    Copy Code
-                  </button>  
-                  <pre>
-                    <code class="code-block">
-let selectElem = document.querySelector('select');
-let logo = document.querySelector('img');
+Brigham Young University-Idaho was founded and is supported and guided by The Church of Jesus Christ of Latter-day Saints. Its mission is to develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities.
 
-selectElem.addEventListener('change', changeTheme);
+The university does this by:
 
-function changeTheme() {
-    let current = selectElem.value;
-    if (current == 'dark') {
-        // code for changes to colors and logo
-    } else {
-        // code for changes to colors and logo
-    }
-}           
+Building testimonies of the restored gospel of Jesus Christ and fostering its principles in a wholesome academic, cultural, and social environment. Providing a high-quality education that prepares students of diverse interests and abilities for lifelong learning and employment. Serving as many students as possible within resource constraints. Delivering education that is affordable for students and the Church.
                     </code>
                   </pre>
                 </li>
               </ul>
             </div>
         </section>  
-            <p>What should be familiar to you is the way you can use the DOM to change the look of the page. For example, with this assignment, it would be the code within the if and else clauses.</p>
-            <p>This is the dark mode logo image you are welcome to use. It shows up nicely on a dark background:</p>
-            <div id="logo">
-              <img src="https://wddbyui.github.io/wdd131/images/byui-logo-white.png" alt="BYUI white logo">
-            </div>
-            
-
             <h2>Submit your project</h2>
             <p>Commit your changes, then push them to GitHub. Wait a few minutes then check to make sure they show on Github pages.</p>
             <p>After verifying that your page updated, submit the URL to your page in Ilearn. The URL will look something like this:</p>
