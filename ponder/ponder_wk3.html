@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponder - Unit1B</title>
+    <meta name="description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:site_name" content="WDD 131 Dynamic Web Fundamentals">
+    <meta property="og:title" content="JS">
+    <meta property="og:description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:url" content="https://wddbyui.github.io/wdd131/">
+    <meta property="og:locale" content="en_us">
+    <meta name="twitter:card" content="summary">
+    <link rel="apple-touch-icon" sizes="157x157" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" href="../images/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+    <header class="banner">
+      <div class="banner-left">
+        <span class="web">WEB</span>
+        <div class="title">
+          <div>DYNAMIC</div>
+          <div>FUNDAMENTALS</div>
+        </div>
+      </div>
+      <div class="banner-right">
+        WDD 131
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <h1>Ponder - Responsive Design</h1>    
+        <section class="accordion">
+          <h2>
+              <button type="button" aria-expanded="false" aria-controls="review-topics-content" id="review-topics-toggle" class="button">
+                <span class="caret" aria-hidden="true">▶</span>
+                Introduced Topics
+              </button>
+            </h2>
+            <div id="review-topics-content" class="content" role="region" aria-labelledby="review-topics-toggle" hidden>
+                <ul class="list">
+                  <li>
+                    <h3>Media Queries</h3>
+                    <p>Uses the @media rule to define different styles fro different media types.</p>
+                    <p>The example code shows that if the viewport of the device is 480px wide or wider the background color will be light green.</p>
+                    <p>Change 'min' to 'max' if you want it to effect 480px devices or smaller.</p>
+                    <p>Media queries should always be at the very bottom of your CSS file.</p>
+                    <pre>
+                        <code class="code-block">
+@media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
+}                            
+                        </code>
+                    </pre>
+                  </li>
+                  <li>
+                    <h3>Responsive Navigation</h3>
+                    <p>Handling menu styles on smaller and larger devices.</p>
+                  </li>
+                  <li>
+                    <h3>Using grid-template-columns for responsive design</h3>
+                    <p>By defining the number an size of columns in a grid-based design, allowing content to adapt across various screen sizes.</p>
+                  </li>
+                  <li>
+                    <h3>Mobile First Design</h3>
+                    <p>A web development strategy that prioritizes the design and development for mobile devices before considering larger screens like desktops or tablets.</p>
+                  </li>
+                </ul>
+          </div>
+        </section>
+        <p>'Responsive Design' is the approach to web development where web page layout and content adapt to different screen sizes and devices. A good responsive design ensures a consistent and optimal user experience.</p>
+        <p>Web pages should look good at every size.</p>
+        <p>Responsiveness is important for search engine optimization.</p>
+        <p>This demonstrates our ponder web page with different layouts according to the device size:</p>
+        <img class="mockup" src="../images/responsive.png" alt="responsive layout">
+        <h2>Mobile First</h2>
+        <ol>
+          <li>Prioritizes the most important content first</li>
+          <li>Most users view web on their phone more than any other device</li>
+        </ol>
+        <h3>Practice Code</h3>
+        <p>HTML:</p>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button>  
+        <pre>
+          <code class="code-block">
+&lt;header&gt;
+  &lt;h1&gt;Responsive Design 📖 Scriptures&lt;/h1&gt;
+  &lt;button class=&quot;menu-btn&quot;&gt;
+    &lt;div class=&quot;bar1&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bar2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bar3&quot;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+  &lt;nav&gt;
+    &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Scriptures&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Favorites&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Helaman 5:12&lt;/h2&gt;
+    &lt;p&gt;
+      And now, my sons, remember, remember that it is upon the rock of our
+      Redeemer, who is Christ, the Son of God, that ye must build your
+      foundation; that when the devil shall send forth his mighty winds,
+      yea, his shafts in the whirlwind, yea, when all his hail and his
+      mighty storm shall beat upon you, it shall have no power over you to
+      drag you down to the gulf of misery and endless wo, because of the
+      rock upon which ye are built, which is a sure foundation, a foundation
+      whereon if men build they cannot fall.
+    &lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Mosiah 5:13&lt;/h2&gt;
+    &lt;p&gt;
+      For how knoweth a man the master whom he has not served, and who is a
+      stranger unto him, and is far from the thoughts and intents of his
+      heart?
+    &lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;h2&gt;2 Nephi 32:9&lt;/h2&gt;
+    &lt;p&gt;
+      But behold, I say unto you that ye must pray always, and not faint;
+      that ye must not perform any thing unto the Lord save in the first
+      place ye shall pray unto the Father in the name of Christ, that he
+      will consecrate thy performance unto thee, that thy performance may be
+      for the welfare of thy soul.
+    &lt;/p&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;Jane Doe&lt;/footer&gt;
+
+          </code>
+        </pre>
+        <p>CSS (mobile):</p>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button>  
+        <!-- HTML entity encoding -->
+        <pre>
+          <code class="code-block">
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: Roboto, sans-serif;
+}
+header,
+main,
+footer {
+  max-width: 1000px;
+  margin: 1rem auto;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: lightblue;
+}
+h1 {
+    text-align: center;
+}
+section {
+  padding: 20px;
+  background-color: white;
+  margin: 1em;
+  border: 1px solid #ccc;
+}
+nav {
+    text-align: right;
+}
+nav a {
+    padding: 20px;
+    color: black;
+    display: none;
+}
+nav a:hover {
+    text-decoration: none;
+    color: #616061;
+}
+.menu-btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+}
+footer {
+    text-align: center;
+}
+          </code>
+        </pre>
+        <p>Media query syntax:</p>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button>  
+        <pre>
+          <code class="code-block">
+@media screen and (min-width: 700px) {
+
+}
+          </code>
+        </pre>
+      </div>
+    </main>
+    <footer>
+      <p>Brigham Young University - Idaho <span id="year"></span></p>
+    </footer>
+    </div>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
