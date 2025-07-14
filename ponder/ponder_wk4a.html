@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponder - Unit2B</title>
+    <meta name="description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:site_name" content="WDD 131 Dynamic Web Fundamentals">
+    <meta property="og:title" content="JS">
+    <meta property="og:description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:url" content="https://wddbyui.github.io/wdd131/">
+    <meta property="og:locale" content="en_us">
+    <meta name="twitter:card" content="summary">
+    <link rel="apple-touch-icon" sizes="157x157" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" href="../images/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+    <header class="banner">
+      <div class="banner-left">
+        <span class="web">WEB</span>
+        <div class="title">
+          <div>DYNAMIC</div>
+          <div>FUNDAMENTALS</div>
+        </div>
+      </div>
+      <div class="banner-right">
+        WDD 131
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <h1>Ponder - Responsive Menu</h1>    
+        <section class="accordion">
+          <h2>
+              <button type="button" aria-expanded="false" aria-controls="review-topics-content" id="review-topics-toggle" class="button">
+                <span class="caret" aria-hidden="true">▶</span>
+                Introduced Topics
+              </button>
+            </h2>
+            <div id="review-topics-content" class="content" role="region" aria-labelledby="review-topics-toggle" hidden>
+                <ul class="list">
+                  <li>
+                    <h3>.classList</h3>
+                    <p>The classList property returns the CSS classnames of an element.</p>
+                    <h2>Adding a class called 'hide'</h2>
+                    <pre>
+                        <code class="code-block">
+element.classList.add('hide');                         
+                        </code>
+                    </pre>
+                    <h2>Removing a class called 'hide'</h2>
+                    <pre>
+                        <code class="code-block">
+element.classList.remove('hide');                         
+                        </code>
+                    </pre>
+                    <h2>Toggling a class called 'hide' on and off</h2>
+                    <pre>
+                        <code class="code-block">
+element.classList.toggle('hide');                         
+                        </code>
+                    </pre>
+                  </li>
+                  <li>
+                    <h3>transform</h3>
+                    <p>The transform property allows you to rotate, scale, move, skew, etc., elements.</p>
+                    <h2>translate</h2>
+                    <p>Used with transform to move an element.</p>
+                    <p>This example moves the bars along the y axis and rotates it 45 degrees.</p>
+                    <pre>
+                        <code class="code-block">
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}                        
+                        </code>
+                    </pre>
+                  </li>
+                </ul>
+          </div>
+        </section>
+        <p>This demonstrates finishing up the responsive menu by adding JavaScript and more CSS to make the mobile menu open and close:</p>
+        <video controls class="narrow-video">
+          <source src="../videos/responsive-ponder2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h2>Computational Thinking</h2>
+        <ol>
+          <li>Target the menu button and the navigation.</li>
+          <li>Add a click event listener to the menu button</li>
+          <li>Add and remove the hidden class from the nav.</li>
+          <li>Add and remove a class to change how the menu button looks.</li>
+        </ol>
+        <h3>Practice Code</h3>
+        <p>Additional CSS:</p>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button>  
+        <pre>
+          <code class="code-block">
+.menu {
+    text-align: center;
+}
+.menu a {
+    padding: 20px;
+    color: black;
+    display: block;
+    /* add these */
+    text-decoration: none;
+    border-top: 1px solid gray;
+}
+/* should already have .hide */
+.hide {  
+    display: none;
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    /* add transition */
+    transition: 0.4s;
+}
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+@media screen and (min-width: 700px) {
+   .menu a {
+        display: inline;
+        /* take off border */
+        border: none; 
+    } 
+}
+          </code>
+        </pre>
+        <p>JS:</p>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button>  
+        <!-- HTML entity encoding -->
+        <pre>
+          <code class="code-block">
+let btn = document.querySelector('.menu-btn');
+const menu = document.querySelector('.menu');
+console.log(menu);
+
+btn.addEventListener('click', toggleMenu);
+
+function toggleMenu() {
+    menu.classList.toggle('hide');
+    btn.classList.toggle('change');
+}
+          </code>
+        </pre>
+
+      </div>
+    </main>
+    <footer>
+      <p>Brigham Young University - Idaho <span id="year"></span></p>
+    </footer>
+    </div>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

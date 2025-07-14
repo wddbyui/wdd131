@@ -35,6 +35,11 @@ video {
   width: 70%;
   border: 2px solid black;
 }
+.narrow-video {
+  width: 40%;
+  margin: 0 auto;
+  display: block;
+}
 .mockup {
   width: 75%;
   display: block;
