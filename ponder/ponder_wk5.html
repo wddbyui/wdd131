@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponder - Unit3A</title>
+    <meta name="description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:site_name" content="WDD 131 Dynamic Web Fundamentals">
+    <meta property="og:title" content="JS">
+    <meta property="og:description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:url" content="https://wddbyui.github.io/wdd131/">
+    <meta property="og:locale" content="en_us">
+    <meta name="twitter:card" content="summary">
+    <link rel="apple-touch-icon" sizes="157x157" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" href="../images/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+    <header class="banner">
+      <div class="banner-left">
+        <span class="web">WEB</span>
+        <div class="title">
+          <div>DYNAMIC</div>
+          <div>FUNDAMENTALS</div>
+        </div>
+      </div>
+      <div class="banner-right">
+        WDD 131
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <h1>Ponder - Accessibility and Design</h1>    
+        <section class="accordion">
+          <h2>
+              <button type="button" aria-expanded="false" aria-controls="review-topics-content" id="review-topics-toggle" class="button">
+                <span class="caret" aria-hidden="true">▶</span>
+                Introduced Topics
+              </button>
+            </h2>
+            <div id="review-topics-content" class="content" role="region" aria-labelledby="review-topics-toggle" hidden>
+                <ul class="list">
+                  <li>
+                    <h2>---</h2>
+                    <p>---</p>
+                    <pre>
+                        <code class="code-block">
+               
+                        </code>
+                    </pre>
+    
+                </ul>
+          </div>
+        </section>
+        <p>This demonstrates our ponder web page with different layouts according to the device size:</p>
+        <img class="mockup" src="../images/responsive.png" alt="responsive layout">
+        <h2>Modals</h2>
+        <ol>
+          <li>
+            <p>Each image in this activity has a lower and higher resolution version. The lower resolution images are used in the gallery thumbnails and the higher resolution image is used in the modal.</p>
+            <p>When the user clicks the thumbnail the same higher resolution image shows in the modal.</p>
+            <p>The modal can be closed with the close button with the 'X' by clicking outside the modal image, or by pressing the 'Esc' key.</p>
+          </li>
+        </ol>
+        <h3>Practice Code</h3>
+        <p>HTML:</p>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button>  
+        <pre>
+          <code class="code-block">
+&lt;h1&gt;Gallery&lt;/h1&gt;
+&lt;section class=&quot;gallery&quot;&gt;
+    &lt;figure&gt;  
+        &lt;img src=&quot;images/book-sm.jpg&quot; alt=&quot;person reading a book&quot;&gt;
+    &lt;/figure&gt;
+    &lt;figure&gt;  
+        &lt;img src=&quot;images/couch-sm.jpg&quot; alt=&quot;person sitting on a couch with a phone&quot;&gt;
+    &lt;/figure&gt;
+    &lt;figure&gt;  
+        &lt;img src=&quot;images/desk-sm.jpg&quot; alt=&quot;a work desktop&quot;&gt;
+    &lt;/figure&gt;
+    &lt;figure&gt;  
+        &lt;img src=&quot;images/keyboard-sm.jpg&quot; alt=&quot;person typing on a keyboard&quot;&gt;
+    &lt;/figure&gt;
+    &lt;figure&gt;  
+        &lt;img src=&quot;images/phone-sm.jpg&quot; alt=&quot;person looking at a phone&quot;&gt;
+    &lt;/figure&gt;
+    &lt;figure&gt;  
+        &lt;img src=&quot;images/sit-sm.jpg&quot; alt=&quot;person sitting on a couch&quot;&gt;
+    &lt;/figure&gt;
+&lt;/section&gt;
+&lt;dialog&gt;
+    &lt;img&gt;
+    &lt;button class=&quot;close-viewer&quot;&gt;X&lt;/button&gt;
+&lt;/dialog&gt;
+          </code>
+        </pre>
+        <p>JS:</p>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button>  
+        <!-- HTML entity encoding -->
+        <pre>
+          <code class="code-block">
+const gallery = document.querySelector('.gallery');
+
+const modal = document.querySelector('dialog');
+
+const modalImage = modal.querySelector('img');
+const closeButton = modal.querySelector('.close-viewer');
+
+// Event listener for opening the modal
+gallery.addEventListener('click', showModal);
+
+function showModal(e) {
+    
+// Code to show modal  - Use event parameter 'e'   
+    
+}
+// Close modal on button click
+closeButton.addEventListener('click', () => {
+    modal.close();
+});
+
+// Close modal if clicking outside the image
+modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.close();
+    }
+});
+          </code>
+        </pre>
+        <p>CSS:</p>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button>  
+        <!-- HTML entity encoding -->
+        <pre>
+          <code class="code-block">
+h1 {
+    text-align: center;
+    margin: 35px 0;
+}
+.gallery {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+figure img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 5px 5px 15px black;
+    display: block;
+    margin: 0 auto;
+}
+/* modal */
+
+dialog img {
+    width: 90%;
+    display: block;
+    margin: 20vh auto;
+}
+dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
+}
+.close-viewer {
+    position: absolute;
+    top: 10vh;
+    right: 2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
+}
+
+@media screen and (min-width: 700px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    dialog img {
+        width: 60%;
+        margin: 15vh auto;
+    }
+    .close-viewer {
+        position: absolute;
+        right: 15vh;
+    }
+    .viewer {
+        margin: 50px;
+        padding: 50px;
+    }
+    .viewer img {
+        max-width: 800px;
+    }
+}
+          </code>
+        </pre>
+      </div>
+    </main>
+    <footer>
+      <p>Brigham Young University - Idaho <span id="year"></span></p>
+    </footer>
+    </div>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
