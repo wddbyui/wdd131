@@ -43,14 +43,14 @@
             <div id="review-topics-content" class="content" role="region" aria-labelledby="review-topics-toggle" hidden>
                 <ul class="list">
                   <li>
-                    <h3>dialog</h3>
+                    <h2>dialog</h2>
                     <p>The HTML dialog tag defines a dialog box or subwindow</p>
                     <p>Used to create modals or popup dialogs.</p>
                     <p>A dialog is hidden by default</p>
                     <p>Use .close(); and .open(); to open and close a dialog/modal in JS.</p>
                   </li>
                   <li>
-                    <h3>Event parameter</h3>
+                    <h2>Event parameter</h2>
                     <p>When you use the .addEventListener() method in JS, the function you call to handle the event can have a special parameter which is typically called 'event' or 'e'.</p>
                     <p>This parameter is an object that contains various information and methods related to the specific event that occured.</p>
                     <p>You can use this event parameter to give you control over how the event behaves.</p>
@@ -79,16 +79,22 @@ console.log(paragraph.replace("Max's", "my"));
                         </code>
                     </pre>
                   </li>
+                  
                   <li>
-                    <h2>object-fit</h2>
-                    <p>The object-fit CSS property is used to specify how and image or video element should be resized to fit its container.</p>
-                    <p>If we give images a set width and height it can distort an image unless your aspect ratio is exactly right. To avoid this you can use object-fit: cover; to allow the image to keep it's proper aspect ratio but clip the edges to fit the size.</p>
+                    <h2>position</h2>
+                    <p>The position CSS property is used to specify the type of positioning method used for elements.</p>
+                    <p>'static' is the default and are positioned in the normal HTML flow of the page.</p>
+                    <p>'absolute' is positioned relative to the positioned parent container</p>
+                    <p>'fixed' is positioned relative to the viewport, staying in place as the user scrolls.</p>
+                    <p>'relative' is positioned relative to its normal position in HTML flow.</p>
+                    <p>'sticky' is positioned based on the user's scroll position. Like relative and fixed. Relative until a given offset is met and then it sticks in place like fixed.</p>
+                    <p>You can specify 'top', 'right', bottom, or left measurements to position the element.</p>
                     <pre>
                         <code class="code-block">
-img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
+.close-viewer {
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }
                         </code>
                     </pre>
@@ -168,15 +174,8 @@ gallery.addEventListener('click', showModal);
 
 function showModal(e) {
     
-    const img = e.target;
-
-    const src = img.getAttribute('src');
-    const alt = img.getAttribute('alt');
-    const full = src.replace('-sm.jpg', '-full.jpg');
-
-    modalImage.src = full;
-    modalImage.alt = alt;
-    modal.showModal();
+// Code to show modal  - Use event parameter 'e'   
+    
 }
 // Close modal on button click
 closeButton.addEventListener('click', () => {

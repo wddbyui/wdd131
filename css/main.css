@@ -40,6 +40,9 @@ video {
   margin: 0 auto;
   display: block;
 }
+.sample_img {
+  width: 200px;
+}
 .mockup {
   width: 75%;
   display: block;
