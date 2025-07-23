@@ -38,10 +38,39 @@
             <h3>File Management:</h3>
             <p>Your project should be in a folder called 'charactercard'. Make sure you have an index.html page and separate CSS and JS files.</p>
             <h3>Instructions:</h3>
+            <p>Add social media meta information to the head of the HTML.</p>
+            <section class="accordion">
+          <h2>
+              <button type="button" aria-expanded="false" aria-controls="review-topics-content" id="review-topics-toggle" class="button">
+                <span class="caret" aria-hidden="true">▶</span>
+                Social Media Meta Information
+              </button>
+            </h2>
+            <div id="review-topics-content" class="content" role="region" aria-labelledby="review-topics-toggle" hidden>
+                <ul class="list">
+                  <li>
+                    <h2>Social Media Meta tags</h2>
+                    <p>These meta tags give social media sites the information they need to display a nice summary of our site for easu posting to social media.</p>
+                    <p>Here's an example of recommended tags (change the values to reflect the content of your page):</p>
+                    <pre>
+                        <code class="code-block">
+&lt;meta property=&quot;og:title&quot; content=&quot;Page Title&quot;&gt;
+&lt;meta property=&quot;og:type&quot; content=&quot;website&quot; /&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;Page Description&quot;&gt;
+&lt;meta property=&quot;og:image&quot; content=&quot;URL to an image&quot;&gt;
+&lt;meta property=&quot;og:url&quot; content=&quot;URL of the page&quot;&gt;
+&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;&gt;
+                        </code>
+                    </pre>
+                    <p>og stands for Open Graph, a format developed by Facebook that many social media sites understand now. There are a lot of options for properties to include. The list above is considered a good starting point for most sites.</p>
+                  </li>
+                </ul>
+            </div>
+        </section>
             <p>Create a character card with: properties: name, class, level, health, and image and methods: attacked and levelUp</p>
             <p>The .attacked() method will subtract 20 from the health property value. When the health property reaches zero, let the user know the character has died.</p>
             <p>The .levelUp() method will add 1 to the level property value.</p>
-            <p>This demonstrates how it will look.</p>
+            <p>This demonstrates how it will run.</p>
             <video controls>
               <source src="../videos/character-prove.mp4" type="video/mp4">
               Your browser does not support the video tag.
@@ -49,10 +78,91 @@
             
             <h2>Computational Thinking</h2>
             <p>Using our ponder activity as a guide to plan the code.</p>
-            <p>You are welcome to use the image in the example if you'd like:</p>
+            <p>Here is the image in the example if you'd like to use it:</p>
             <div>
-              <img src="https://wddbyui.github.io/wdd131/images/snortleblat.png" alt="Swamp Beast Diplomat">
+              <img class='sample_img' src="https://andejuli.github.io/wdd131/character_card/snortleblat.webp" alt="Swamp Beast Diplomat">
             </div>
+            <section class="accordion">
+          <h2>
+            <button type="button" aria-expanded="false" aria-controls="introduced-topics-content" id="introduced-topics-toggle" class="button">
+              <span class="caret" aria-hidden="true">▶</span>
+              CSS used in example
+            </button>
+          </h2>
+          <div id="introduced-topics-content" class="content" role="region" aria-labelledby="introduced-topics-toggle" hidden>
+              <ul class="list">
+                <li>
+                  <button  class="copy-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+                    </svg>
+                    Copy Code
+                  </button>  
+                  <pre>
+                    <code class="code-block">
+  body {
+    font-family: Palatino Linotype, sans-serif;
+    background: #f0f4f8;
+  }
+
+  .card {
+    background: #313131;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.9);
+    width: 400px; 
+    margin: 100px auto;
+  }
+
+  .image{
+    width: 400px;
+    border-radius: 15px 15px 0 0;
+    }
+
+  .name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: -4px 0 20px 0;
+    color: white;
+    padding: 15px 0 15px 35px;
+    background-color: #5d747b;
+  }
+
+  .stats {
+    margin: 10px 15px 7px 35px;
+    text-align: left;
+  }
+
+  .stats p {
+    margin: 5px 0;
+    color: #f0f4f8;
+  }
+
+  .buttons {
+    text-align: center;
+  }
+
+  button {
+    padding: 8px 12px;
+    margin: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #5d747b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+  }
+
+  button:hover {
+    background-color: #58605a;
+  }            
+                    </code>
+                  </pre>
+                </li>
+              </ul>
+            </div>
+        </section>  
+        
             <h2>Submit your project</h2>
             <p>Commit your changes, then push them to GitHub. Wait a few minutes then check to make sure they show on Github pages.</p>
             <p>After verifying that your page updated, submit the URL to your page in Ilearn. The URL will look something like this:</p>
