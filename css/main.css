@@ -48,6 +48,14 @@ video {
   display: block;
   margin: 0 auto;
 }
+.tall-mockup {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+}
+.para-link {
+  text-decoration: underline;
+}
 pre {
   border: 2px solid black;
   border-radius: 4px;
