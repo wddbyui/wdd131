@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prove - Week 9</title>
+    <meta name="description" content="Curriculum for the BYUI WDD 131 course">
+    <meta name="author" content="Julie Ann Anderson">
+    <meta property="og:site_name" content="WDD 131 Dynamic Web Fundamentals">
+    <meta property="og:title" content="JS">
+    <meta property="og:description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:url" content="https://wddbyui.github.io/wdd131/">
+    <meta property="og:locale" content="en_us">
+    <meta name="twitter:card" content="summary">
+    <link rel="apple-touch-icon" sizes="157x157" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" href="../images/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+    <header class="banner">
+      <div class="banner-left">
+        <span class="web">WEB</span>
+        <div class="title">
+          <div>DYNAMIC</div>
+          <div>FUNDAMENTALS</div>
+        </div>
+      </div>
+      <div class="banner-right">
+        WDD 131
+      </div>
+    </header>
+    <main>
+        <div id="content">
+            <h1>Prove - Flexbox</h1>
+
+            <h2>Recipe Book Part 2</h2>
+            <h3>File Management:</h3>
+            <p>Create a folder called 'recipes'. Make sure you have an index.html page and a separate CSS file. </p>
+            <h3>Instructions:</h3>
+            <p>Use flexbox to layout the logo and title, the search area, the recipe, and the footer.</p>
+            <p>This demonstrates how it will look.</p>
+            <img class='mockup'src="../images/recipe.jpg" alt="responsive layout">
+            <p>Notice how the recipe description does not show up on mobile devices.</p>
+            <p>The apple crisp image,logo, search icon, and social media icons are included in these images. Download the <a class="para-link" href="../images/images.zip">recipe images</a> and add them to your project folder. You will use the rest of the recipe images in the next prove activity.</p>
+            <p>We are using some icons from a site called Flaticon. We are free to use them, but the license require some attribution in return. This site asks that we add this link. We will put it in the footer.</p>
+            <button  class="copy-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+                    </svg>
+                    Copy Code
+                  </button>  
+            <pre>
+                <code>
+&lt;a href=&quot;https://www.flaticon.com/free-icons/recipe&quot; title=&quot;recipe icons&quot;&gt;Recipe icons created by Freepik - Flaticon&lt;/a&gt;                   
+                </code>
+            </pre>
+            <p>Along with the attribution for the recipe book icon, we also need some social media icons. These icons also require attribution. These icons are provided from Iconfinder through an account called AlfredoCreates. The license here is bit more flexible in how we attribute. This time we will do it in a comment.</p>
+            <button  class="copy-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+                    </svg>
+                    Copy Code
+                  </button>  
+            <pre>
+                <code>
+&lt;div class=&quot;social&quot;&gt;
+  &lt;!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  --&gt;
+  &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;images/instagram_icon.svg&quot; alt=&quot;instagram icon&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;images/youtube_icon.svg&quot; alt=&quot;youtube icon&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;images/pinterest_icon.svg&quot; alt=&quot;pinterest icon&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;                  
+                </code>
+            </pre>
+            <p>For the ratings section we want to show filled in and empty stars. We need to make sure that this very visual rating representation is also accessible. We can use aria attributes to do this.</p>
+            <button  class="copy-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+                    </svg>
+                    Copy Code
+                  </button>  
+            <pre>
+                <code>
+&lt;span
+  class=&quot;rating&quot;
+  role=&quot;img&quot;
+  aria-label=&quot;Rating: 4 out of 5 stars&quot;
+&gt;
+  &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-star&quot;&gt;⭐&lt;/span&gt;
+  &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-star&quot;&gt;⭐&lt;/span&gt;
+  &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-star&quot;&gt;⭐&lt;/span&gt;
+  &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-star-empty&quot;&gt;⭐&lt;/span&gt;
+  &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-star-empty&quot;&gt;☆&lt;/span&gt;
+&lt;/span&gt;
+                </code>
+            </pre>
+            <p>The font used for the headlines is called Amatic SC and can be found on Google fonts.</p>
+            <h2>Submit your project</h2>
+            <p>Commit your changes, then push them to GitHub. Wait a few minutes then check to make sure they show on Github pages.</p>
+            <p>After verifying that your page updated, submit the URL to your page in Ilearn. The URL will look something like this:</p>
+              <code class="code-block submit"> 
+https://githubusername.github.io/wdd131/recipes
+              </code> 
+            <p>Make sure to replace "githubusername" with your actual github username.</p>
+        </div>
+    </main>
+    <footer>
+      <p>Brigham Young University - Idaho <span id="year"></span></p>
+    </footer>
+    </div>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
