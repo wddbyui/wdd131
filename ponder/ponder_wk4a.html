@@ -32,12 +32,12 @@
     </header>
     <main>
       <div id="content">
-        <h1>Ponder - Responsive Menu</h1>    
+        <h1>Ponder - Responsive Menu</h1> 
         <section class="accordion">
           <h2>
               <button type="button" aria-expanded="false" aria-controls="review-topics-content" id="review-topics-toggle" class="button">
                 <span class="caret" aria-hidden="true">▶</span>
-                Introduced Topics
+                Review Topics
               </button>
             </h2>
             <div id="review-topics-content" class="content" role="region" aria-labelledby="review-topics-toggle" hidden>
@@ -64,6 +64,18 @@ element.classList.toggle('hide');
                         </code>
                     </pre>
                   </li>
+                </ul>
+          </div>
+        </section>   
+        <section class="accordion">
+          <h2>
+              <button type="button" aria-expanded="false" aria-controls="intro-topics-content" id="intro-topics-toggle" class="button">
+                <span class="caret" aria-hidden="true">▶</span>
+                Introduced Topics
+              </button>
+            </h2>
+            <div id="intro-topics-content" class="content" role="region" aria-labelledby="intro-topics-toggle" hidden>
+                <ul class="list">
                   <li>
                     <h2>transform</h2>
                     <p>The transform property allows you to rotate, scale, move, skew, etc., elements.</p>
