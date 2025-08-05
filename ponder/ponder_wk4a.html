@@ -88,15 +88,18 @@ element.classList.toggle('hide');
           <source src="../videos/responsive-ponder2.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
-        <h2>Computational Thinking</h2>
+        <p>In order to get our menu to look like the example, we will need to add some CSS to our navigation links. We will also create a 'hide' class that we can add and remove in JS depending on if the menu is open or closed. We will add that 'hide' class to the nav element in HTML. We can add some optional CSS animation, the code is given below.</p>
+        <h2>Computational Thinking for JavaScript</h2>
         <ol>
           <li>Target the menu button and the navigation.</li>
           <li>Add a click event listener to the menu button</li>
-          <li>Add and remove the hidden class from the nav.</li>
-          <li>Add and remove a class to change how the menu button looks.</li>
+          <li>When the event happens:</li>
+          <ol>
+            <li>Add and remove the hidden class from the nav.</li>
+            <li>Add and remove a class to change how the menu button looks.</li>
+          </ol>
         </ol>
-        <h3>Practice Code</h3>
-        <p>Additional CSS:</p>
+        <h3>Animation CSS Code</h3>
         <button  class="copy-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
   <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
@@ -105,29 +108,6 @@ element.classList.toggle('hide');
         </button>  
         <pre>
           <code class="code-block">
-.menu {
-    text-align: center;
-}
-.menu a {
-    padding: 20px;
-    color: black;
-    display: block;
-    /* add these */
-    text-decoration: none;
-    border-top: 1px solid gray;
-}
-/* should already have .hide */
-.hide {  
-    display: none;
-}
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-    /* add transition */
-    transition: 0.4s;
-}
 .change .bar1 {
   transform: translate(0, 11px) rotate(-45deg);
 }
@@ -136,38 +116,8 @@ element.classList.toggle('hide');
 .change .bar3 {
   transform: translate(0, -11px) rotate(45deg);
 }
-@media screen and (min-width: 700px) {
-   .menu a {
-        display: inline;
-        /* take off border */
-        border: none; 
-    } 
-}
           </code>
         </pre>
-        <p>JS:</p>
-        <button  class="copy-button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
-  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
-          </svg>
-          Copy Code
-        </button>  
-        <!-- HTML entity encoding -->
-        <pre>
-          <code class="code-block">
-let btn = document.querySelector('.menu-btn');
-const menu = document.querySelector('.menu');
-console.log(menu);
-
-btn.addEventListener('click', toggleMenu);
-
-function toggleMenu() {
-    menu.classList.toggle('hide');
-    btn.classList.toggle('change');
-}
-          </code>
-        </pre>
-
       </div>
     </main>
     <footer>
