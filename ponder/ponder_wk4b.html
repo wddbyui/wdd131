@@ -47,7 +47,7 @@
                     <p>The HTML dialog tag defines a dialog box or subwindow</p>
                     <p>Used to create modals or popup dialogs.</p>
                     <p>A dialog is hidden by default</p>
-                    <p>Use .close(); and .open(); to open and close a dialog/modal in JS.</p>
+                    <p>Use .close(); and .showModal(); to open and close a dialog/modal in JS.</p>
                   </li>
                   <li>
                     <h2>Event parameter</h2>
@@ -57,9 +57,9 @@
                     <p>It does not have to be explicitly sent as an argument in the call to the function.</p>
                     <pre>
                         <code class="code-block">
-gallery.addEventListener('click', showModal);
+gallery.addEventListener('click', openModal);
 
-function showModal(e) {
+function openModal(e) {
     console.log(e);
     console.log(e.target);
 }                  
@@ -169,9 +169,9 @@ const modalImage = modal.querySelector('img');
 const closeButton = modal.querySelector('.close-viewer');
 
 // Event listener for opening the modal
-gallery.addEventListener('click', showModal);
+gallery.addEventListener('click', openModal);
 
-function showModal(e) {
+function openModal(e) {
     
 // Code to show modal  - Use event parameter 'e'   
     
