@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponder - Unit3A</title>
+    <meta name="description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:site_name" content="WDD 131 Dynamic Web Fundamentals">
+    <meta property="og:title" content="JS">
+    <meta property="og:description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:url" content="https://wddbyui.github.io/wdd131/">
+    <meta property="og:locale" content="en_us">
+    <meta name="twitter:card" content="summary">
+    <link rel="apple-touch-icon" sizes="157x157" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" href="../images/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+    <header class="banner">
+      <div class="banner-left">
+        <span class="web">WEB</span>
+        <div class="title">
+          <div>DYNAMIC</div>
+          <div>FUNDAMENTALS</div>
+        </div>
+      </div>
+      <div class="banner-right">
+        WDD 131
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <h1>Ponder - Array Methods</h1>    
+        <section class="accordion">
+          <h2>
+              <button type="button" aria-expanded="false" aria-controls="review-topics-content" id="review-topics-toggle" class="button">
+                <span class="caret" aria-hidden="true">▶</span>
+                Introduced Topics
+              </button>
+            </h2>
+            <div id="review-topics-content" class="content" role="region" aria-labelledby="review-topics-toggle" hidden>
+                <ul class="list">
+                  <li>
+                    <h2>.forEach()</h2>
+                    <p>The .forEach() method calls a function for each element in an array.</p>
+                    <pre>
+                        <code class="code-block">
+const numbers = [65, 44, 12, 4];
+numbers.forEach(myFunction)
+
+function myFunction(item) {
+  console.log(item * 10); 
+}     
+//Console output: 650, 440, 120, 40          
+                        </code>
+                    </pre>
+                  </li>
+                  <li>
+                    <h2>.map()</h2>
+                    <p>The .map() method creates a new array from calling a function for every array element.</p>
+                    <pre>
+                        <code class="code-block">
+const numbers = [65, 44, 12, 4];
+const newArr = numbers.map(myFunction)
+
+function myFunction(num) {
+  return num * 10;
+}         
+                        </code>
+                    </pre>
+                  </li>
+                  </li>
+                  <li>
+                    <h2>.filter()</h2>
+                    <p>The .filter() method creates a new array filled with elements that pass a test provided by a function.</p>
+                    <pre>
+                        <code class="code-block">
+const ages = [32, 33, 16, 40];
+const result = ages.filter(checkAdult);
+
+function checkAdult(age) {
+  return age >= 18;
+} 
+                        </code>
+                    </pre>
+                  </li>
+                  <li>
+                    <h2>.reduce()</h2>
+                    <p>The .reduce() method creates a new array filled with elements that pass a test provided by a function.</p>
+                    <pre>
+                        <code class="code-block">    
+const numbers = [125, 20, 5];
+
+document.getElementById("output").innerHTML = numbers.reduce(myFunc);
+
+function myFunc(total, num) {
+  return total - num;
+}
+                        </code>
+                    </pre>
+                  </li>
+                  <li>
+                    <h2>.indexOf()</h2>
+                    <p>The .indexOf() method returns the first index position of a specified value.</p>
+                    <pre>
+                        <code class="code-block">    
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let index = fruits.indexOf("Apple");
+                        </code>
+                    </pre>
+                  </li>
+                  <li>
+                    <h2>Template Literals</h2>
+                    <p>A template literal is a special type of string in JS that allows multiple lines, calculations, calls to functions, and string interpolation.</p>
+                    <p>String interpolation uses ${...} to insert variables or expressions directly into the string.</p>
+                    <p>The template literal uses backticks (`) to enclose the string.</p>
+                    <pre>
+                        <code class="code-block">
+const movieSummary = &#96;
+  &lt;div class=&quot;movie-summary&quot;&gt;
+    &lt;h2&gt;${movie.title}&lt;/h2&gt;
+    &lt;p&gt;${movie.genre} - ${stars}&lt;/p&gt;
+  &lt;/div&gt;
+&#96;;
+
+document.getElementById(&quot;movie-list&quot;).innerHTML += movieSummary;            
+                        </code>
+                    </pre>
+                  </li>
+                  <li>
+                    <h2>JavaScript Object</h2>
+                    <p>Objects are variables, but objects contain many values</p>
+                    <p>Objects have name/value pairs of data. Like the object of a car would have a name with the value of Fiat, and a Model with a number 500, and a color with the value of white.</p>
+                    <pre>
+                        <code class="code-block">
+const car = {type:"Fiat", model:"500", color:"white"};       
+                        </code>
+                    </pre>
+                  </li>
+                </ul>
+          </div>
+        </section>
+        <p>Practice with Array methods and a simple template literal for dynamic content.</p>
+        <h3>Practice Code</h3>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button>  
+        <pre>
+          <code class="code-block">
+function convert(grade) {
+    switch (grade){
+        case 'A':
+            points = 4;
+            break;
+        case 'B':
+            points = 3;
+            break;
+        case 'C':
+            points = 2;
+            break;
+        case 'D':
+            points = 1;
+            break;
+        case 'F':
+            points = 0;
+            break;
+        default:
+            alert('not a valid grade');
+    }
+    return points;
+}
+          </code>
+        </pre>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button>  
+        <!-- HTML entity encoding -->
+        <pre>
+          <code class="code-block">
+const words = ['watermelon', 'peach', 'apple', 'tomato', 'grape'];
+          </code>
+        </pre>
+        <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button>  
+        <!-- HTML entity encoding -->
+        <pre>
+          <code class="code-block">
+const students = [
+    {last: 'Andrus', first: 'Aaron'},
+    {last: 'Masa', first:'Manny'},
+    {last: 'Tanda', first: 'Tamanda'}
+];
+          </code>
+        </pre>
+      </div>
+    </main>
+    <footer>
+      <p>Brigham Young University - Idaho <span id="year"></span></p>
+    </footer>
+    </div>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
