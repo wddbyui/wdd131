@@ -102,56 +102,56 @@ const cardNum = cardNumber.value.trim();
         </button>  
         <pre>
           <code class="code-block">
-&lt;header&gt;&lt;h1&gt;Checkout&lt;/h1&gt;&lt;/header&gt;
-&lt;main&gt;
-  &lt;section class=&quot;errors&quot;&gt;&lt;/section&gt;
-  &lt;form id=&quot;checkoutForm&quot; action=&quot;completed.html&quot; method=&quot;get&quot;&gt;
-    &lt;label for=&quot;fullName&quot;&gt;Full Name:&lt;/label&gt;
-    &lt;input type=&quot;text&quot; id=&quot;fullName&quot; name=&quot;fullName&quot; required&gt;
-    &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
-    &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;email@email.com&quot; required&gt;
+  &lt;header&gt;&lt;h1&gt;Checkout&lt;/h1&gt;&lt;/header&gt;
+  &lt;main&gt;
+    &lt;section class=&quot;errors&quot;&gt;&lt;/section&gt;
+    &lt;form id=&quot;checkoutForm&quot; action=&quot;completed.html&quot; method=&quot;get&quot;&gt;
+      &lt;label for=&quot;fullName&quot;&gt;Full Name:&lt;/label&gt;
+      &lt;input type=&quot;text&quot; id=&quot;fullName&quot; name=&quot;fullName&quot; required&gt;
+      &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
+      &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;email@email.com&quot; required&gt;
 
-    &lt;label for=&quot;address&quot;&gt;Address:&lt;/label&gt;
-    &lt;textarea id=&quot;address&quot; name=&quot;address&quot; rows=&quot;4&quot; required&gt;&lt;/textarea&gt;
+      &lt;label for=&quot;address&quot;&gt;Address:&lt;/label&gt;
+      &lt;textarea id=&quot;address&quot; name=&quot;address&quot; rows=&quot;4&quot; required&gt;&lt;/textarea&gt;
 
-    &lt;label for=&quot;paymentMethod&quot;&gt;Payment Method:&lt;/label&gt;
-    &lt;select id=&quot;paymentMethod&quot; name=&quot;paymentMethod&quot; required aria-expanded=&quot;false&quot; aria-controls=&quot;creditCardnumberContainer paypalUsernameContainer&quot;&gt;
-        &lt;option value=&quot;&quot;&gt;Select Payment Method&lt;/option&gt;
-        &lt;option value=&quot;creditCard&quot;&gt;Credit Card&lt;/option&gt;
-        &lt;option value=&quot;paypal&quot;&gt;PayPal&lt;/option&gt;
-    &lt;/select&gt;
+      &lt;label for=&quot;paymentMethod&quot;&gt;Payment Method:&lt;/label&gt;
+      &lt;select id=&quot;paymentMethod&quot; name=&quot;paymentMethod&quot; required aria-expanded=&quot;false&quot; aria-controls=&quot;creditCardnumberContainer paypalUsernameContainer&quot;&gt;
+          &lt;option value=&quot;&quot;&gt;Select Payment Method&lt;/option&gt;
+          &lt;option value=&quot;creditCard&quot;&gt;Credit Card&lt;/option&gt;
+          &lt;option value=&quot;paypal&quot;&gt;PayPal&lt;/option&gt;
+      &lt;/select&gt;
 
-    &lt;!-- Container for credit card details --&gt;
-    &lt;p id=&quot;creditCardNumberContainer&quot; class=&quot;hide&quot; role=&quot;region&quot; aria-labelledby=&quot;creditCardLabel&quot;&gt;
-        &lt;label id=&quot;creditCardLabel&quot; for=&quot;creditCardNumber&quot;&gt;Credit Card Number:&lt;/label&gt;
-        &lt;input
-        type=&quot;text&quot;
-        id=&quot;creditCardNumber&quot;
-        name=&quot;creditCardNumber&quot;
-        pattern=&quot;[0-9]{16}&quot;
-        placeholder=&quot;Enter 16 digits&quot;
-        required
-        /&gt;
-        &lt;label for=&quot;expirationDate&quot;&gt;Expiration&lt;/label&gt;
-            &lt;input type='text' id='month' name=&quot;expMonth&quot; placeholder=&quot;MM&quot; aria-labelledby=&quot;expirationDate&quot;&gt;
-            &lt;input type='text' id='year' name=&quot;expYear&quot; placeholder=&quot;YY&quot; aria-labelledby=&quot;expirationDate&quot;&gt;
-    &lt;/p&gt;
+      &lt;!-- Container for credit card details --&gt;
+      &lt;p id=&quot;creditCardNumberContainer&quot; class=&quot;hide&quot; role=&quot;region&quot; aria-labelledby=&quot;creditCardLabel&quot;&gt;
+          &lt;label id=&quot;creditCardLabel&quot; for=&quot;creditCardNumber&quot;&gt;Credit Card Number:&lt;/label&gt;
+          &lt;input
+          type=&quot;text&quot;
+          id=&quot;creditCardNumber&quot;
+          name=&quot;creditCardNumber&quot;
+          pattern=&quot;[0-9]{16}&quot;
+          placeholder=&quot;Enter 16 digits&quot;
+          required
+          /&gt;
+          &lt;label for=&quot;expirationDate&quot;&gt;Expiration&lt;/label&gt;
+              &lt;input type='text' id='month' name=&quot;expMonth&quot; placeholder=&quot;MM&quot; aria-labelledby=&quot;expirationDate&quot;&gt;
+              &lt;input type='text' id='year' name=&quot;expYear&quot; placeholder=&quot;YY&quot; aria-labelledby=&quot;expirationDate&quot;&gt;
+      &lt;/p&gt;
 
-    &lt;!-- Container for PayPal details --&gt;
-    &lt;p id=&quot;paypalUsernameContainer&quot; class=&quot;hide&quot; role=&quot;region&quot; aria-labelledby=&quot;paypalLabel&quot;&gt;
-        &lt;label id=&quot;paypalLabel&quot; for=&quot;paypalUsername&quot;&gt;PayPal Username:&lt;/label&gt;
-        &lt;input
-        type=&quot;text&quot;
-        id=&quot;paypalUsername&quot;
-        name=&quot;paypalUsername&quot;
-        placeholder=&quot;Enter PayPal username&quot;
-        required
-        /&gt;
-    &lt;/p&gt;
+      &lt;!-- Container for PayPal details --&gt;
+      &lt;p id=&quot;paypalUsernameContainer&quot; class=&quot;hide&quot; role=&quot;region&quot; aria-labelledby=&quot;paypalLabel&quot;&gt;
+          &lt;label id=&quot;paypalLabel&quot; for=&quot;paypalUsername&quot;&gt;PayPal Username:&lt;/label&gt;
+          &lt;input
+          type=&quot;text&quot;
+          id=&quot;paypalUsername&quot;
+          name=&quot;paypalUsername&quot;
+          placeholder=&quot;Enter PayPal username&quot;
+          required
+          /&gt;
+      &lt;/p&gt;
 
-    &lt;button type=&quot;submit&quot;&gt;Place Order&lt;/button&gt;
-  &lt;/form&gt;
-&lt;/main&gt;
+      &lt;button type=&quot;submit&quot;&gt;Place Order&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/main&gt;
           </code>
         </pre>
         
