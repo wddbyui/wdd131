@@ -199,21 +199,19 @@ const cardNum = cardNumber.value.trim();
 function togglePaymentDetails(e) {
     
     // Show the container based on the selected payment method, and add the required attribute back.
-        let value = e.target.value; //theForm.paymentMethod.value
+        let value = e.target.value; 
         paypalContainer.classList.add('hide');
         creditCardContainer.classList.add('hide');
-        paypalInput.required=false;  //theForm.paypalUsername.required = false;
+        paypalInput.required=false; 
         creditInput.required=false;
       
         // hide and how selected payment type
         if (value == 'creditCard') {
           creditCardContainer.classList.remove('hide');
           creditInput.required=true;
-          // paypalInput.disabled=true;
         } else if (value == 'paypal') {
           paypalContainer.classList.remove('hide');
           paypalInput.required=true;
-          // creditInput.disabled=true;
         }
 
         // Update ARIA expanded attribute
