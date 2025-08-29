@@ -54,15 +54,31 @@
                     <p>Here's an example of recommended tags (change the values to reflect the content of your page):</p>
                     <pre>
                         <code class="code-block">
-&lt;meta property=&quot;og:title&quot; content=&quot;Page Title&quot;&gt;
-&lt;meta property=&quot;og:type&quot; content=&quot;website&quot; /&gt;
-&lt;meta property=&quot;og:description&quot; content=&quot;Page Description&quot;&gt;
-&lt;meta property=&quot;og:image&quot; content=&quot;URL to an image&quot;&gt;
-&lt;meta property=&quot;og:url&quot; content=&quot;URL of the page&quot;&gt;
+&lt;!-- Open Graph (Facebook, LinkedIn, etc.) --&gt;
+&lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
+&lt;meta property=&quot;og:title&quot; content=&quot;Put Page Title Here&quot;&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;Put Page Description Here&quot;&gt;
+&lt;meta property=&quot;og:url&quot; content=&quot;https://yourURLofPage.here&quot;&gt;
+&lt;meta property=&quot;og:image&quot; content=&quot;https://yourURLofSocialPreviewImageHere.png&quot;&gt;
+
+&lt;!-- Twitter Card --&gt;
 &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;&gt;
+&lt;meta name=&quot;twitter:title&quot; content=&quot;Put Page Title Here&quot;&gt;
+&lt;meta name=&quot;twitter:description&quot; content=&quot;Put Page Description Here&quot;&gt;
+&lt;meta name=&quot;twitter:image&quot; content=&quot;https://yourURLofSocialPreviewImageHere.png&quot;&gt;
+
+&lt;!-- One favicon (ICO works everywhere) --&gt;
+&lt;link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot;&gt;
+
+&lt;!-- One Apple Touch Icon (iOS home screen) --&gt;
+&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/images/apple-touch-icon.png&quot;&gt;
+
                         </code>
                     </pre>
                     <p>og stands for Open Graph, a format developed by Facebook that many social media sites understand now. There are a lot of options for properties to include. The list above is considered a good starting point for most sites.</p>
+                    <p>Favicons are usually 16x16, 32x32, or 64x64 pixels</p>
+                    <p>Social Preview images are 1200x630</p>
+                    <p>Apple Touch images are 180x180</p>
                   </li>
                 </ul>
             </div>
