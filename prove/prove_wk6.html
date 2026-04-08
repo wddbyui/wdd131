@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prove - Unit 3B - Week 6</title>
+    <meta name="description" content="Curriculum for the BYUI WDD 131 course">
+    <meta name="author" content="Julie Ann Anderson">
+    <meta property="og:site_name" content="WDD 131 Dynamic Web Fundamentals">
+    <meta property="og:title" content="JS">
+    <meta property="og:description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:url" content="https://wddbyui.github.io/wdd131/">
+    <meta property="og:locale" content="en_us">
+    <meta name="twitter:card" content="summary">
+    <link rel="apple-touch-icon" sizes="157x157" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" href="../images/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+    <header class="banner">
+      <div class="banner-left">
+        <span class="web">WEB</span>
+        <div class="title">
+          <div>DYNAMIC</div>
+          <div>FUNDAMENTALS</div>
+        </div>
+      </div>
+      <div class="banner-right">
+        WDD 131
+      </div>
+    </header>
+    <main>
+        <div id="content">
+            <h1>Prove - Build a Blog Part 2</h1>
+
+            <h2>Dynamic Content</h2>
+            <h3>File Management:</h3>
+            <p>Your project should be in a folder called 'blog'. Make sure you have an index.html page and separate CSS and JS files.</p>
+            <h3>Instructions:</h3>
+            <p>Use the following object array in your JS file to bring in each book article dynamically.</p>
+            <p>On a real site the articles data would be pulled from a database and requested as needed. In order to keep ours simple we will just store it in a variable locally.</p>
+            <button  class="copy-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.4em;">
+  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
+          </svg>
+          Copy Code
+        </button>  
+            <pre>
+                <code class="code-block">
+const articles = [
+	{
+		id: 1,
+		title: 'Septimus Heap Book One: Magyk',
+		date: 'July 5, 2022',
+		description:
+			'If you enjoy stories about seventh sons of seventh sons and magyk this is the book for you.',
+		imgSrc: 'https://upload.wikimedia.org/wikipedia/en/5/5f/Magkycover2.jpg',
+		imgAlt: 'Book cover for Septimus Heap 1',
+		ages: '10-14',
+		genre: 'Fantasy',
+		stars: '⭐⭐⭐⭐'
+	},
+	{
+		id: 2,
+		title: 'Magnus Chase Book One: Sword of Summer',
+		date: 'December 12, 2021',
+		description:
+			'The anticipated new novel by Rick Riordan. After Greek mythology (Percy Jackson), Greek/Roman (Heroes of Olympus), and Egyptian (Kane Chronicles), Rick decides to try his hand with Norse Mythology, and the end result is good.',
+		imgSrc:
+			'https://books.google.com/books/content/images/frontcover/xWuyBAAAQBAJ?fife=w300',
+		imgAlt: 'Book cover for Magnus Chase 1',
+		ages: '12-16',
+		genre: 'Fantasy',
+		stars: '⭐⭐⭐⭐'
+	},
+	{
+		id: 3,
+		title: "Belgariad Book One: Pawn of Prophecy",
+		date: "Feb 12, 2022",
+		description:
+		"A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his 'Aunt Pol' and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.",
+		imgSrc:
+		"https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
+		imgAlt: "Book cover for Pawn of Prophecy",
+		ages: "12-16",
+		genre: "Fantasy",
+		stars: "⭐⭐⭐⭐⭐"
+	}
+];
+                </code>
+            </pre>
+            <h2>Computational Thinking</h2>
+            <p>Using our ponder activity as a guide think through how you can bring in each book onto the web page dynamically.</p>
+            <p>This demonstrates how it will look. Remember this is not static content.</p>
+            <img class="tall-mockup" src="../images/blog2.jpg" alt="responsive layout">
+            <h2>Submit your project</h2>
+            <p>Commit your changes, then push them to GitHub. Wait a few minutes then check to make sure they show on Github pages.</p>
+            <p>After verifying that your page updated, submit the URL to your page in Ilearn. The URL will look something like this:</p>
+              <code class="code-block submit"> 
+https://githubusername.github.io/wdd131/blog
+              </code> 
+            <p>Make sure to replace "githubusername" with your actual github username.</p>
+        </div>
+    </main>
+    <footer>
+      <p>Brigham Young University - Idaho <span id="year"></span></p>
+    </footer>
+    </div>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

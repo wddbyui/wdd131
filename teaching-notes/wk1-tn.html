@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching Notes - Week 1</title>
+    <meta name="description" content="Curriculum for the BYUI WDD 131 course">
+    <meta name="author" content="Julie Ann Anderson">
+    <meta property="og:site_name" content="WDD 131 Dynamic Web Fundamentals">
+    <meta property="og:title" content="JS">
+    <meta property="og:description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:url" content="https://wddbyui.github.io/wdd131/">
+    <meta property="og:locale" content="en_us">
+    <meta name="twitter:card" content="summary">
+    <link rel="apple-touch-icon" sizes="157x157" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" href="../images/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+    <header class="banner">
+      <div class="banner-left">
+        <span class="web">WEB</span>
+        <div class="title">
+          <div>DYNAMIC</div>
+          <div>FUNDAMENTALS</div>
+        </div>
+      </div>
+      <div class="banner-right">
+        WDD 131
+      </div>
+    </header>
+    <main>
+        <div id="content">
+            <h1>Unit 1A (Week 1) - Teacher Notes - Do not publish</h1>
+            <h2 id="video_caution">The videos in these teaching notes were created for online students only, not for campus students. They are only included here, for on-campus instructors, for possible ideas for classroom discussions and to demonstrate the ponder activities for on-campus courses.</h2>
+            <h2>Prepare</h2>
+            <p>Have students prepare by either using AI or reading through slide notes. (online students also watch videos)</p>
+            <p>This video introduces and reviews the concept of the HTML head section.</p>
+            <video controls>
+                <source src="https://wddbyui.github.io/wdd131/videos/head-section-intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>This video introduces and reviews the concept of CSS Selectors.</p>
+            <video controls>
+                <source src="https://wddbyui.github.io/wdd131/videos/css-selectors-intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>This video introduces JavaScript.</p>
+            <video controls>
+                <source src="https://wddbyui.github.io/wdd131/videos/what-is-js.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>This video introduces the concept of JS Variables and Constants.</p>
+            <video controls>
+                <source src="https://wddbyui.github.io/wdd131/videos/variables_constants.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>This videos introduces the concept of debugging with JavaScript and Dev Tools.</p><p>Live Server often interferes with debugging so a YouTube video was chosen here.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/H0XScE08hy8?si=ZpBBLZaxSvjbSyj1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <h2>Ponder</h2>
+            <h2 id="video_caution">Students DO NOT have all the code for certain ponders. Online students must watch the videos to get additional code. On-campus students must attend class to get additional code from the instructor.</h2>
+            <p>These videos demonstrate meta tags and CSS selectors.</p>
+            <a id="sol" target="_blank" href="../ponder/sol/week1-ponder-sol.html">Ponder Solution</a>
+            <h3>Part 1</h3>
+            <video controls>
+                <source src="https://wddbyui.github.io/wdd131/videos/meta-css-ponder.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Part 2</h3>
+            <video controls>
+                <source src="https://wddbyui.github.io/wdd131/videos/meta-css-ponder2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Variables and Constants</h3>
+            <video controls>
+                <source src="https://wddbyui.github.io/wdd131/videos/variables-constants-ponder.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <h2>Prove</h2>
+            <p>The Prove assignments follows the HTML and CSS ponder quite closely.</p>
+            <a id="sol" target="_blank" href="../prove/sol/mission/index.html">Possible Prove Solution</a>
+            <span>This solution also has next week's JS in it as well.</span>
+        </div>
+    </main>
+    <footer>
+      <p>Brigham Young University - Idaho <span id="year"></span></p>
+    </footer>
+  </div>
+    <script>
+      let year = new Date();
+      document.querySelector('#year').textContent = year.getFullYear();
+    </script>
+</body>
+</html>

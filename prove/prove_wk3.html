@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prove - Unit 2A - Week 3</title>
+    <meta name="description" content="Curriculum for the BYUI WDD 131 course">
+    <meta name="author" content="Julie Ann Anderson">
+    <meta property="og:site_name" content="WDD 131 Dynamic Web Fundamentals">
+    <meta property="og:title" content="JS">
+    <meta property="og:description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:url" content="https://wddbyui.github.io/wdd131/">
+    <meta property="og:locale" content="en_us">
+    <meta name="twitter:card" content="summary">
+    <link rel="apple-touch-icon" sizes="157x157" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" href="../images/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+    <header class="banner">
+      <div class="banner-left">
+        <span class="web">WEB</span>
+        <div class="title">
+          <div>DYNAMIC</div>
+          <div>FUNDAMENTALS</div>
+        </div>
+      </div>
+      <div class="banner-right">
+        WDD 131
+      </div>
+    </header>
+    <main>
+        <div id="content">
+            <h1>Prove - Responsive Design</h1>
+            <section class="accordion">
+          <h2>
+              <button type="button" aria-expanded="false" aria-controls="review-topics-content" id="review-topics-toggle" class="button">
+                <span class="caret" aria-hidden="true">▶</span>
+                Additional Topic
+              </button>
+            </h2>
+            <div id="review-topics-content" class="content" role="region" aria-labelledby="review-topics-toggle" hidden>
+                <ul class="list">
+                  <li>
+                    <h2>object-fit</h2>
+                    <p>The object-fit CSS property is used to specify how and image or video element should be resized to fit its container.</p>
+                    <p>If we give images a set width and height it can distort an image unless your aspect ratio is exactly right. To avoid this you can use object-fit: cover; to allow the image to keep it's proper aspect ratio but clip the edges to fit the size.</p>
+                    <pre>
+                        <code class="code-block">
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+                        </code>
+                    </pre>
+                  </li>
+                </ul>
+            </div>
+        </section>
+            <h2>Cool Pics Part 1 - Responsive Menu and Media Queries</h2>
+            <h3>File Management:</h3>
+            <p>Your project should be in a folder called 'coolpics'. Make sure you have an index.html page and a separate CSS file. </p>
+            <h3>Instructions:</h3>
+            <p>Include all the proper elements in the head of your page including: meta tags, title, and link to CSS.</p>
+            <p>The CSS should be mobile first. </p>
+            <p><em>Use object-fit: cover; to make the images all square while keeping the proper aspect ratio.</em></p>
+            <p>The menu should be responsive and change according to the user's device size.</p>
+            <p>The mobile menu will hide and show the navigation links in the next prove assignment. The navigation and links will just be hidden on mobile for this prove.</p>
+            <p>Remember a good web page always has a footer. You are welcome to put whatever text you want in the footer.</p>
+            <p>This demonstrates our ponder web page with different layouts according to the device size:</p>
+            <img class="mockup" src="../images/responsive-coolpics.jpg" alt="responsive layout">
+            
+          
+            <p>Here is the image needed.</p>
+            <div>
+              <img class="sample_img" src="https://wddbyui.github.io/wdd131/images/norris-sm.jpg" alt="BYUI white logo">
+            </div>
+            <p>Here is a camera emoji for the title of the page. Use it as a text character.</p>
+            <p>📷</p>
+    
+            <h2>Submit your project</h2>
+            <p>Commit your changes, then push them to GitHub. Wait a few minutes then check to make sure they show on Github pages.</p>
+            <p>After verifying that your page updated, submit the URL to your page in Ilearn. The URL will look something like this:</p>
+              <code class="code-block submit"> 
+https://githubusername.github.io/wdd131/coolpics
+              </code> 
+            <p>Make sure to replace "githubusername" with your actual github username.</p>
+        </div>
+    </main>
+    <footer>
+      <p>Brigham Young University - Idaho <span id="year"></span></p>
+    </footer>
+    </div>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

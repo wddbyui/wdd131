@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponder - Week 10</title>
+    <meta name="description" content="Curriculum for the BYUI WDD 131 course">
+    <meta name="author" content="Julie Ann Anderson">
+    <meta property="og:site_name" content="WDD 131 Dynamic Web Fundamentals">
+    <meta property="og:title" content="JS">
+    <meta property="og:description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:url" content="https://wddbyui.github.io/wdd131/">
+    <meta property="og:locale" content="en_us">
+    <meta name="twitter:card" content="summary">
+    <link rel="apple-touch-icon" sizes="157x157" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" href="../images/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+    <header class="banner">
+      <div class="banner-left">
+        <span class="web">WEB</span>
+        <div class="title">
+          <div>DYNAMIC</div>
+          <div>FUNDAMENTALS</div>
+        </div>
+      </div>
+      <div class="banner-right">
+        WDD 131
+      </div>
+    </header>
+    <main>
+        <div id="content">
+            <h1>Filter Transcript</h1>
+            <p>Using the same simpleList array of fruit. Let's filter it by finding only the fruit that has the string 'an' in it.</p>
+            <p>The condition that is used for the .filter() array method is if the string 'an' is found in or is 'included' in each of the array items using the .includes() method, then the new array filterList will get that item. filterList will included 3 items or fruit: 'Bananas', 'mango', and 'oranges'.</p>
+            <pre>
+                <code class="code-block">
+const simpleList = ["oranges", "grapes", "lemons", "apples", "Bananas", "watermelons", "coconuts", "broccoli", "mango"];
+
+let query = 'an';
+
+let filterList = simpleList.filter(function(item) {
+  return item.includes(query);
+})
+
+console.log(filterList);
+                </code>
+            </pre>
+            <p>However, if we change our query string to 'b' it will only find 'broccoli' and not 'Banana'. This is because 'Banana' begins with a capital 'B'. Let's use .toLowerCase() to make sure each item in the array is lowercase before comparing.</p>
+            <pre>
+                <code class="code-block">
+let filterList = simpleList.filter(function(item) {
+  return item.toLowerCase().includes(query);
+})
+                </code>
+            </pre>
+            <p>If we are getting our search string or query from our user, we might also want to make sure their input is lowercase as well. So we can also add .toLowerCase() to the query string as well. Our code is simply assigning the variable query with a set string, but we might will want to get a search string from our users via an input box and we won't be able to control if they enter a upper or lower case string. So let's add .toLowerCase() to the search string as well.
+            </p>
+            <pre>
+                <code class="code-block">
+let filterList = simpleList.filter(function(item) {
+  return item.toLowerCase().includes(query.toLowerCase());
+})
+                </code>
+            </pre>
+            <p>We can even filter by looking in the arrays of an object. For example this object array has multiple traits for each animal. We can look through each array item of an object (or the traits of one animal) to use as a condition to filter. We will use the .find() method which searches an array and returns those the include a certain string. Similar to .includes() but it will search through each array item. If we wanted to filter our objects by if the trait wild, we would use .find() to look at each trait of each animal for the 'wild' string. This give us the wild animals 'Lion', 'Elephant', and 'Fox'.
+            </p>
+            <pre>
+                <code class="code-block">
+const animals = [
+  {
+    name: "Lion",
+    traits: ["brave", "strong", "fierce", "wild"]
+  },
+  {
+    name: "Elephant",
+    traits: ["large", "gentle", "smart", "wild"]
+  },
+  {
+    name: "Fox",
+    traits: ["sly", "quick", "clever", "wild"]
+  },
+  {
+    name: "Dog",
+    traits: ["loyal", "friendly", "playful", "cuddly"]
+  },
+  {
+    name: "Cat",
+    traits: ["quiet", "independent", "curious", "cuddly"]
+  }
+];
+
+let searchText = 'wild';
+
+
+let filterAnimalList = animals.filter(function(animal) {
+  return animal.traits.find(function(trait) {
+    return trait.toLowerCase().includes(searchText.toLowerCase())
+  })
+})
+
+console.log(filterAnimalList);
+                </code>
+            </pre>
+            <p>Or to make it a bit more siccinct, you can use an arrow function with .find().</p>
+            <pre>
+                <code class="code-block">
+
+let filterAnimalList = animals.filter(function(animal) {
+  return animal.traits.find(trait => trait.toLowerCase().includes(searchText.toLowerCase()));
+})
+                </code>
+            </pre>
+  </div>
+    </main>
+    <footer>
+      <p>Brigham Young University - Idaho <span id="year"></span></p>
+    </footer>
+  </div>
+    <script>
+      let year = new Date();
+      document.querySelector('#year').textContent = year.getFullYear();
+    </script>
+</body>
+</html>

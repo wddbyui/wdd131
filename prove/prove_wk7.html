@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prove - Unit 4A - Week 7</title>
+    <meta name="description" content="Curriculum for the BYUI WDD 131 course">
+    <meta name="author" content="Julie Ann Anderson">
+    <meta property="og:site_name" content="WDD 131 Dynamic Web Fundamentals">
+    <meta property="og:title" content="JS">
+    <meta property="og:description" content="Curriculum for the BYUI WDD 131 course">
+    <meta property="og:url" content="https://wddbyui.github.io/wdd131/">
+    <meta property="og:locale" content="en_us">
+    <meta name="twitter:card" content="summary">
+    <link rel="apple-touch-icon" sizes="157x157" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" href="../images/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+    <header class="banner">
+      <div class="banner-left">
+        <span class="web">WEB</span>
+        <div class="title">
+          <div>DYNAMIC</div>
+          <div>FUNDAMENTALS</div>
+        </div>
+      </div>
+      <div class="banner-right">
+        WDD 131
+      </div>
+    </header>
+    <main>
+        <div id="content">
+            <h1>Prove - Credit Card Form</h1>
+
+            <h2>Grid review and Form validation</h2>
+            <h3>File Management:</h3>
+            <p>Your project should be in a folder called 'creditcard'. Make sure you have an index.html page and separate CSS and JS files.</p>
+            <h3>Instructions:</h3>
+            <p>Create a form that looks like a credit card.</p>
+            <p>Include a favicon that will show up on the browser tab.</p>
+            <p>This demonstrates how it will look.</p>
+            <img class='tall-mockup'src="../images/creditcard.png" alt="responsive layout">
+            <p>The example uses the emoji 💳 for the credit card symbol.</p>
+            <p>Use aria to have one label represent both the month and year inputs:</p>
+            <pre>
+                <code>
+&lt;div id=&quot;cardExpiration&quot;&gt;
+    &lt;label for=&quot;expirationDate&quot;&gt;EXPIRATION&lt;/label&gt;
+    &lt;input type=&#39;text&#39; id=&#39;month&#39; name=&quot;expMonth&quot; placeholder=&quot;MM&quot; aria-labelledby=&quot;expirationDate&quot;&gt;
+    &lt;input type=&#39;text&#39; id=&#39;year&#39; name=&quot;expYear&quot; placeholder=&quot;YY&quot; aria-labelledby=&quot;expirationDate&quot;&gt;
+&lt;/div&gt;
+                </code>
+            </pre>
+            <p>Using grid, layout the credit card. Here are some ideas:</p>
+            <img class="sample_grids" src="../images/ccgrids.jpg" alt="responsive layout">
+            <h2>Computational Thinking</h2>
+            <p>Using our ponder activity as a guide, validate the exact '1234123412341234' credit card number and make sure the card is not expired.</p>
+            <p>Give the user some feedback after a successful submit.</p>
+            <h2>Submit your project</h2>
+            <p>Commit your changes, then push them to GitHub. Wait a few minutes then check to make sure they show on Github pages.</p>
+            <p>After verifying that your page updated, submit the URL to your page in Ilearn. The URL will look something like this:</p>
+              <code class="code-block submit"> 
+https://githubusername.github.io/wdd131/creditcard
+              </code> 
+            <p>Make sure to replace "githubusername" with your actual github username.</p>
+        </div>
+    </main>
+    <footer>
+      <p>Brigham Young University - Idaho <span id="year"></span></p>
+    </footer>
+    </div>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
