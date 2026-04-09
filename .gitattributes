@@ -3,7 +3,6 @@ videos/forms-checkout.mp4 filter=lfs diff=lfs merge=lfs -text
 /videos/meta-css-ponder.mp4 filter=lfs diff=lfs merge=lfs -text
 /videos/meta-css-ponder-lg.mp4 filter=lfs diff=lfs merge=lfs -text
 /videos/variables-constants-ponder.mp4 filter=lfs diff=lfs merge=lfs -text
-/videos/dom-ponder.mp4 filter=lfs diff=lfs merge=lfs -text
 /videos/responsive.mp4 filter=lfs diff=lfs merge=lfs -text
 /videos/modal.mp4 filter=lfs diff=lfs merge=lfs -text
 /videos/dynamic-data.mp4 filter=lfs diff=lfs merge=lfs -text
