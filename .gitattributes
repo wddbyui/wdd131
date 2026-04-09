@@ -6,7 +6,6 @@ videos/forms-checkout.mp4 filter=lfs diff=lfs merge=lfs -text
 /videos/dom-ponder.mp4 filter=lfs diff=lfs merge=lfs -text
 /videos/responsive.mp4 filter=lfs diff=lfs merge=lfs -text
 /videos/modal.mp4 filter=lfs diff=lfs merge=lfs -text
-/videos/array-ponder.mp4 filter=lfs diff=lfs merge=lfs -text
 /videos/dynamic-data.mp4 filter=lfs diff=lfs merge=lfs -text
 /videos/forms-checkout.mp4 filter=lfs diff=lfs merge=lfs -text
 /videos/flexbox-ponder.mp4 filter=lfs diff=lfs merge=lfs -text
