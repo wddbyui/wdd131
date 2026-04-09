@@ -33,37 +33,39 @@
     </header>
     <main>
         <div id="content">
-            <h1>Prove - Credit Card Form</h1>
+            <h1>Prove - Event Ticket Form</h1>
 
-            <h2>Grid review and Form validation</h2>
+            <h2>Form validation</h2>
             <h3>File Management:</h3>
-            <p>Your project should be in a folder called 'creditcard'. Make sure you have an index.html page and separate CSS and JS files.</p>
+            <p>Your project should be in a folder called 'eventform'. Make sure you have an index.html page and separate CSS and JS files.</p>
             <h3>Instructions:</h3>
-            <p>Create a form that looks like a credit card.</p>
-            <p>Include a favicon that will show up on the browser tab.</p>
+            <p>Create a form that allows student to sign up for an event. They need to choose a date that is later than the current date.</p>
             <p>This demonstrates how it will look.</p>
-            <img class='tall-mockup'src="../images/creditcard.png" alt="responsive layout">
-            <p>The example uses the emoji 💳 for the credit card symbol.</p>
-            <p>Use aria to have one label represent both the month and year inputs:</p>
-            <pre>
-                <code>
-&lt;div id=&quot;cardExpiration&quot;&gt;
-    &lt;label for=&quot;expirationDate&quot;&gt;EXPIRATION&lt;/label&gt;
-    &lt;input type=&#39;text&#39; id=&#39;month&#39; name=&quot;expMonth&quot; placeholder=&quot;MM&quot; aria-labelledby=&quot;expirationDate&quot;&gt;
-    &lt;input type=&#39;text&#39; id=&#39;year&#39; name=&quot;expYear&quot; placeholder=&quot;YY&quot; aria-labelledby=&quot;expirationDate&quot;&gt;
-&lt;/div&gt;
-                </code>
-            </pre>
-            <p>Using grid, layout the credit card. Here are some ideas:</p>
-            <img class="sample_grids" src="../images/ccgrids.jpg" alt="responsive layout">
-            <h2>Computational Thinking</h2>
-            <p>Using our ponder activity as a guide, validate the exact '1234123412341234' credit card number and make sure the card is not expired.</p>
-            <p>Give the user some feedback after a successful submit.</p>
+            <img class='narrow-video'src="../images/form1.png" alt="event form">
+              
+            <p>Using the 'Type' drop down select element, the user also indicates if they are a student or a guest.</p> 
+            <img class='narrow-video'src="../images/form_dropdown.png" alt="event form">
+
+            <p>Once they choose one or the other, a hidden div containing a label and the input area will show up on the form.</p> 
+            
+            <p> If they are a student the input label will indicate 'Student I#' and they need to enter a 9 digit student I number.</p> 
+            <img class='narrow-video'src="../images/form_student.png" alt="event form">
+            <p>If they are a guest the label will indicate 'Access Code' and they need to enter the event code 'EVENT131'</p>
+            <img class='narrow-video'src="../images/form_guest.png" alt="event form">
+
+            <p>If there are any errors the user needs to know about when the form is submitted, place them below the form.</p>
+            <img class='narrow-video'src="../images/form_error.png" alt="event form">
+
+            <p>Give the user some ticket information after a successful submit.</p>
+            <img class='narrow-video'src="../images/form_ticket.png" alt="event form">
+
+            <p>Include a favicon that will show up on the browser tab.</p>
+
             <h2>Submit your project</h2>
             <p>Commit your changes, then push them to GitHub. Wait a few minutes then check to make sure they show on Github pages.</p>
             <p>After verifying that your page updated, submit the URL to your page in Ilearn. The URL will look something like this:</p>
               <code class="code-block submit"> 
-https://githubusername.github.io/wdd131/creditcard
+https://githubusername.github.io/wdd131/eventform
               </code> 
             <p>Make sure to replace "githubusername" with your actual github username.</p>
         </div>
