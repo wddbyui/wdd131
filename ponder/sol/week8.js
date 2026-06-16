@@ -47,6 +47,7 @@ function sectionTemplate(section) {
 aCourse.enrollStudent();
 
 document.querySelector("#enrollStudent").addEventListener("click", function () {
+    event.preventDefault(); //this allows enter to work as well
     const sectionNum = document.querySelector("#sectionNumber").value;
     aCourse.enrollStudent(sectionNum);
   });
