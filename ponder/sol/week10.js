@@ -74,7 +74,7 @@ const hikes = [
                 
 function search() {
 
-    let hikeQuery = document.querySelector('#search').value;
+    let hikeQuery = input.value;
 
     let filteredHikes = hikes.filter(function(hike){
         return ( 
